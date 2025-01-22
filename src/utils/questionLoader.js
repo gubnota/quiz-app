@@ -1,3 +1,5 @@
+import { BASE_URL, joinPaths } from "../config";
+
 /**
  * Loads questions for a given category from JSON files via HTTP
  * @param {Object} selectedCategory - The selected category object from FLATTENED_CATEGORIES
@@ -23,7 +25,9 @@ export const loadQuestionsForCategory = async (selectedCategory) => {
       const allQuestions = await Promise.all(
         categoriesToLoad.map(async (catValue) => {
           try {
-            const response = await fetch(`/data/categories/${catValue}.json`);
+            const response = await fetch(
+              `${import.meta.env.BASE_URL}data/categories/${catValue}.json`
+            );
             if (!response.ok) {
               throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -51,7 +55,9 @@ export const loadQuestionsForCategory = async (selectedCategory) => {
     } else {
       // Load single category questions
       const response = await fetch(
-        `/data/categories/${selectedCategory.value}.json`
+        `${import.meta.env.BASE_URL}data/categories/${
+          selectedCategory.value
+        }.json`
       );
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -64,3 +70,16 @@ export const loadQuestionsForCategory = async (selectedCategory) => {
     return [];
   }
 };
+
+export async function loadQuestions() {
+  try {
+    const response = await fetch(
+      `${import.meta.env.BASE_URL}data/questions.json`
+    );
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error loading questions:", error);
+    throw error;
+  }
+}

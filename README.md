@@ -7,9 +7,9 @@
   <a href="https://github.com/gubnota/quiz-app/actions?query=workflow%3A%22Node.js+CI%22">
     <img src="https://github.com/gubnota/quiz-app/workflows/Node.js%20CI/badge.svg" alt="Node.js CI" />
   </a>
-  <a href="https://github.com/gubnota/quiz-app/releases">
+  <!-- <a href="https://github.com/gubnota/quiz-app/releases">
     <img src="https://img.shields.io/github/v/release/gubnota/quiz-app" alt="GitHub Release (latest by date)" />
-  </a>
+  </a> -->
   <a href="https://github.com/gubnota/quiz-app/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/gubnota/quiz-app" alt="License" />
   </a>

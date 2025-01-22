@@ -13,4 +13,7 @@ export default defineConfig({
   resolve: {
     extensions: [".js", ".jsx", ".json"],
   },
+  // Use environment variable for base URL, default to root
+  // eslint-disable-next-line no-undef
+  base: process.env.VITE_BASE_URL || "/",
 });
