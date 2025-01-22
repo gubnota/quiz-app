@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Что такое **Hot Reload** во Flutter и как он работает?",
+    "correct_answer": "Hot Reload сохраняет состояние приложения и обновляет UI без полной перезагрузки",
+    "incorrect_answers": [
+      "Hot Reload полностью перезапускает приложение",
+      "Hot Reload только для отладки UI",
+      "Hot Reload работает только с Stateless виджетами"
+    ],
+    "explanation": "Hot Reload инжектирует обновленный исходный код в работающую Dart VM, сохраняя состояние приложения"
+  },
+  {
+    "question": "Какой результат выполнения этого кода?\n```dart\nvoid main() {\n  var list = <int>[1, 2, 3];\n  var mapped = list.map((e) => e * 2);\n  print(mapped.runtimeType);\n}\n```",
+    "correct_answer": "MappedListIterable<int>",
+    "incorrect_answers": [
+      "List<int>",
+      "Iterable<int>",
+      "Array<int>"
+    ],
+    "explanation": "map() возвращает ленивый MappedListIterable, а не новый List. Для получения List нужно вызвать .toList()"
+  }
+] 

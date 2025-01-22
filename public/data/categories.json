@@ -1,0 +1,66 @@
+{
+  "categories": [
+    {
+      "key": "programming",
+      "text": "Programming",
+      "value": "programming",
+      "subcategories": [
+        { "key": "code",
+        "text": "code",
+        "value": "code"
+      },
+      { "key": "design_patterns",
+      "text": "Design patterns",
+      "value": "design_patterns"
+    },
+    
+        {
+          "key": "dart_flutter",
+          "text": "Dart & Flutter",
+          "value": "dart_flutter",
+          "subcategories": [
+            {
+              "key": "dart",
+              "text": "Dart Programming",
+              "value": "dart"
+            },
+            {
+              "key": "flutter",
+              "text": "Flutter Framework",
+              "value": "flutter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "Geography",
+      "text": "Geography",
+      "value": "geography",
+      "subcategories": [
+          {
+              "key": "capitals",
+              "text": "World's capitals",
+              "value": "geo/capitals"
+          }
+      ]
+    },
+    {
+      "key": "math",
+      "text": "Mathematics",
+      "value": "math",
+      "subcategories": [
+        {
+          "key": "calculus",
+          "text": "Calculus",
+          "value": "math/calculus"
+        },
+        {
+          "key": "algebra",
+          "text": "Algebra",
+          "value": "math/algebra"
+        }
+      ]
+    }
+  ]
+} 

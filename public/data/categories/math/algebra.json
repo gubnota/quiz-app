@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Solve the quadratic equation: $$ax^2 + bx + c = 0$$\nGiven $$a=1$$, $$b=5$$, $$c=6$$",
+    "correct_answer": "$$x = -2$$ or $$x = -3$$",
+    "incorrect_answers": [
+      "$$x = 2$$ or $$x = 3$$",
+      "$$x = \\pm 2$$",
+      "$$x = \\pm 3$$"
+    ],
+    "explanation": "Using the quadratic formula: $$x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$$\n$$x = \\frac{-5 \\pm \\sqrt{25-24}}{2} = \\frac{-5 \\pm 1}{2}$$"
+  },
+  {
+    "question": "What is the solution to the system of equations?\n$$\\begin{cases} 2x + y = 7 \\\\ x - y = 1 \\end{cases}$$",
+    "correct_answer": "$$x = 3, y = 1$$",
+    "incorrect_answers": [
+      "$$x = 1, y = 3$$",
+      "$$x = 2, y = 3$$",
+      "$$x = 7, y = 1$$"
+    ],
+    "explanation": "Add the equations to eliminate y:\n$$3x = 8$$ $$\\therefore x = \\frac{8}{3}$$\nSubstitute back to find y"
+  },
+  {
+    "question": "Simplify the expression: $$\\frac{x^2-4}{x-2}$$, where $$x \\neq 2$$",
+    "correct_answer": "$$x + 2$$",
+    "incorrect_answers": [
+      "$$x - 2$$",
+      "$$x^2 - 2$$",
+      "Cannot be simplified"
+    ],
+    "explanation": "Factor the numerator: $$\\frac{(x+2)(x-2)}{x-2}$$ = $$x + 2$$"
+  }
+] 

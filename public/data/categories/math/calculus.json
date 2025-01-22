@@ -1,0 +1,32 @@
+[
+  {
+    "question": "What is the derivative of $$f(x) = x^2$$ ?",
+    "correct_answer": "$$f'(x) = 2x$$",
+    "incorrect_answers": [
+      "$$f'(x) = x$$",
+      "$$f'(x) = 2$$",
+      "$$f'(x) = x^2$$"
+    ],
+    "explanation": "The power rule states that the derivative of $$x^n$$ is $$nx^{n-1}$$"
+  },
+  {
+    "question": "Evaluate the integral: $$\\int_0^1 x^2 dx$$",
+    "correct_answer": "$$\\frac{1}{3}$$",
+    "incorrect_answers": [
+      "$$\\frac{1}{2}$$",
+      "$$1$$",
+      "$$\\frac{1}{4}$$"
+    ],
+    "explanation": "$$\\int_0^1 x^2 dx = [\\frac{x^3}{3}]_0^1 = \\frac{1}{3} - 0 = \\frac{1}{3}$$"
+  },
+  {
+    "question": "Find the limit: $$\\displaystyle\\lim_{x \\to 0} \\frac{\\sin(x)}{x}$$",
+    "correct_answer": "$$1$$",
+    "incorrect_answers": [
+      "$$0$$",
+      "$$\\infty$$",
+      "Does not exist"
+    ],
+    "explanation": "This is a famous limit that equals 1. It can be proven using L'Hôpital's rule: $$\\lim_{x \\to 0} \\frac{\\cos(x)}{1} = 1$$"
+  }
+] 

@@ -1,0 +1,7 @@
+[
+    {
+      "question": "What is the capital of France?",
+      "correct_answer": "Paris",
+      "incorrect_answers": ["London", "Berlin", "Madrid"]
+    }
+  ]

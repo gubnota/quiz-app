@@ -1,9 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Segment, Header, Button } from 'semantic-ui-react';
-
-import ShareButton from '../ShareButton';
-import { calculateScore, calculateGrade, timeConverter } from '../../utils';
+import PropTypes from "prop-types";
+import { Segment, Header, Button } from "semantic-ui-react";
+import { calculateScore, calculateGrade, timeConverter } from "../../utils";
 
 const Stats = ({
   totalQuestions,
@@ -37,10 +34,16 @@ const Stats = ({
         Passing Score: 60%
       </Header>
       <Header as="h3" textAlign="center" block>
-        Time Taken:{' '}
+        Time Taken:{" "}
         {`${Number(hours)}h ${Number(minutes)}m ${Number(seconds)}s`}
       </Header>
-      <div style={{ marginTop: 35 }}>
+      <div
+        style={{
+          marginTop: 35,
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
         <Button
           primary
           content="Play Again"
@@ -59,7 +62,6 @@ const Stats = ({
           labelPosition="left"
           style={{ marginBottom: 8 }}
         />
-        <ShareButton />
       </div>
     </Segment>
   );

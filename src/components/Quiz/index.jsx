@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import {
   Container,
   Segment,
@@ -10,11 +10,17 @@ import {
   Message,
   Menu,
   Header,
-} from 'semantic-ui-react';
-import he from 'he';
+} from "semantic-ui-react";
+import he from "he";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { tomorrow } from "react-syntax-highlighter/dist/esm/styles/prism";
+import ReactMarkdown from "react-markdown";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import "katex/dist/katex.min.css";
 
-import Countdown from '../Countdown';
-import { getLetter } from '../../utils';
+import Countdown from "../Countdown";
+import { getLetter } from "../../utils";
 
 const Quiz = ({ data, countdownTime, endQuiz }) => {
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -24,7 +30,7 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
   const [timeTaken, setTimeTaken] = useState(null);
 
   useEffect(() => {
-    if (questionIndex > 0) window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (questionIndex > 0) window.scrollTo({ top: 0, behavior: "smooth" });
   }, [questionIndex]);
 
   const handleItemClick = (e, { name }) => {
@@ -60,13 +66,53 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
     setQuestionsAndAnswers(qna);
   };
 
-  const timeOver = timeTaken => {
+  const timeOver = (timeTaken) => {
     return endQuiz({
       totalQuestions: data.length,
       correctAnswers,
       timeTaken,
       questionsAndAnswers,
     });
+  };
+
+  const handleReset = () => {
+    endQuiz({
+      totalQuestions: 0,
+      correctAnswers: 0,
+      timeTaken: 0,
+      questionsAndAnswers: [],
+    });
+  };
+  // const handleHome = () => {};
+
+  const renderContent = (content) => {
+    return (
+      <ReactMarkdown
+        remarkPlugins={[remarkMath]}
+        rehypePlugins={[rehypeKatex]}
+        components={{
+          code({ inline, className, children, ...props }) {
+            const match = /language-(\w+)/.exec(className || "");
+            return !inline && match ? (
+              <SyntaxHighlighter
+                language={match[1]}
+                style={tomorrow}
+                customStyle={{ marginTop: "10px", marginBottom: "10px" }}
+                {...props}
+              >
+                {String(children).replace(/\n$/, "")}
+              </SyntaxHighlighter>
+            ) : (
+              <code className={className} {...props}>
+                {children}
+              </code>
+            );
+          },
+        }}
+      >
+        {he.decode(content)}
+      </ReactMarkdown>
+    );
   };
 
   return (
@@ -83,6 +129,26 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
                       {`Question No.${questionIndex + 1} of ${data.length}`}
                     </Header.Content>
                   </Header>
+                  <Button.Group floated="right">
+                    {/* <Button
+                      icon
+                      circular
+                      size="large"
+                      onClick={handleHome}
+                      title="Back to Main Menu"
+                    >
+                      <Icon name="home" />
+                    </Button> */}
+                    <Button
+                      icon
+                      circular
+                      size="large"
+                      onClick={handleReset}
+                      title="Reset Quiz"
+                    >
+                      <Icon name="redo" />
+                    </Button>
+                  </Button.Group>
                   <Countdown
                     countdownTime={countdownTime}
                     timeOver={timeOver}
@@ -92,7 +158,7 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
                 <br />
                 <Item.Meta>
                   <Message size="huge" floating>
-                    <b>{`Q. ${he.decode(data[questionIndex].question)}`}</b>
+                    {renderContent(data[questionIndex].question)}
                   </Message>
                   <br />
                   <Item.Description>
@@ -111,8 +177,8 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
                           active={userSlectedAns === decodedOption}
                           onClick={handleItemClick}
                         >
-                          <b style={{ marginRight: '8px' }}>{letter}</b>
-                          {decodedOption}
+                          <b style={{ marginRight: "8px" }}>{letter}</b>
+                          {renderContent(option)}
                         </Menu.Item>
                       );
                     })}

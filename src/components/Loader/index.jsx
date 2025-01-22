@@ -1,5 +1,5 @@
-import React from 'react';
 import { Container, Message, Icon } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
 
 const Loader = ({ title, message }) => (
   <Container>
@@ -12,5 +12,10 @@ const Loader = ({ title, message }) => (
     </Message>
   </Container>
 );
+
+Loader.propTypes = {
+  title: PropTypes.string,
+  message: PropTypes.string
+};
 
 export default Loader;

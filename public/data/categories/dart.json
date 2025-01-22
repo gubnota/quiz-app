@@ -1,0 +1,62 @@
+[
+  {
+    "question": "What will be printed?\n```dart\nvoid main() {\n  var list = [1, 2, 3];\n  var result = list.map((x) => x * 2);\n  print(result.runtimeType);\n  print(result);\n}\n```",
+    "correct_answer": "```\nMappedListIterable<int>\n(2, 4, 6)\n```",
+    "incorrect_answers": [
+      "```\nList<int>\n[2, 4, 6]\n```",
+      "```\nIterable<int>\n[2, 4, 6]\n```",
+      "```\nIterator<int>\n2, 4, 6\n```"
+    ],
+    "explanation": "The map() method returns a lazy MappedListIterable, not a List. To get a List, you need to call .toList()"
+  },
+  {
+    "question": "Which code snippet correctly implements a singleton pattern in Dart?\n",
+    "correct_answer": "```dart\nclass Singleton {\n  static final Singleton _instance = Singleton._internal();\n  \n  factory Singleton() {\n    return _instance;\n  }\n  \n  Singleton._internal();\n}\n```",
+    "incorrect_answers": [
+      "```dart\nclass Singleton {\n  static Singleton instance = new Singleton();\n  \n  Singleton() {}\n}\n```",
+      "```dart\nclass Singleton {\n  static Singleton get instance => Singleton();\n  \n  Singleton();\n}\n```",
+      "```dart\nclass Singleton {\n  static final instance = Singleton();\n  \n  Singleton();\n}\n```"
+    ],
+    "explanation": "The correct implementation uses a private constructor and factory constructor to ensure single instance"
+  },
+  {
+    "question": "What's wrong with this Dart implementation of the Observer pattern?\n```dart\nclass Subject {\n  List<Observer> observers;\n  \n  void notify() {\n    observers.forEach((o) => o.update());\n  }\n}\n```",
+    "correct_answer": "observers list is not initialized",
+    "incorrect_answers": [
+      "notify method is incorrect",
+      "Observer type is undefined",
+      "forEach syntax is wrong"
+    ],
+    "explanation": "The observers list needs to be initialized: List<Observer> observers = [];"
+  },
+  {
+    "question": "Как работает многопоточность в Dart?\n```dart\nFuture<void> main() async {\n  print('Start');\n  await Future.delayed(Duration(seconds: 1));\n  print('End');\n}\n```",
+    "correct_answer": "Dart использует event loop и изоляты вместо классических потоков",
+    "incorrect_answers": [
+      "Dart использует системные потоки напрямую",
+      "Dart не поддерживает многопоточность",
+      "Dart использует только async/await для параллелизма"
+    ],
+    "explanation": "Dart использует event loop для асинхронности и изоляты для параллельного выполнения кода. Изоляты не разделяют память и общаются через сообщения"
+  },
+  {
+    "question": "Что такое Zone в Dart и для чего она используется?\n\n*Выберите наиболее полный ответ*",
+    "correct_answer": "Zone - это контекст выполнения, который перехватывает асинхронные события и ошибки",
+    "incorrect_answers": [
+      "Zone - это область видимости переменных",
+      "Zone - это изолированная область памяти",
+      "Zone - это способ организации кода"
+    ],
+    "explanation": "Zones в Dart позволяют создавать изолированные контексты выполнения, где можно перехватывать ошибки, логировать события и контролировать выполнение асинхронного кода"
+  },
+  {
+    "question": "Какой принцип Clean Architecture нарушен в этом коде?\n```dart\nclass UserRepository {\n  final http.Client client;\n  \n  Future<User> getUser(int id) async {\n    final response = await client.get('api/users/$id');\n    return User.fromJson(response.body);\n  }\n}\n```",
+    "correct_answer": "Принцип инверсии зависимостей (DIP)",
+    "incorrect_answers": [
+      "Принцип единственной ответственности (SRP)",
+      "Принцип открытости/закрытости (OCP)",
+      "Принцип подстановки Лисков (LSP)"
+    ],
+    "explanation": "Repository не должен зависеть от конкретной реализации http.Client. Вместо этого нужно использовать абстракцию (интерфейс)"
+  }
+] 

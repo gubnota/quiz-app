@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Расположите в правильном порядке методы жизненного цикла Stateful виджета:\n```dart\n1. build()\n2. initState()\n3. dispose()\n4. didUpdateWidget()\n5. createState()\n```",
+    "correct_answer": "5 -> 2 -> 1 -> 4 -> 3",
+    "incorrect_answers": [
+      "2 -> 5 -> 1 -> 4 -> 3",
+      "5 -> 2 -> 4 -> 1 -> 3",
+      "2 -> 1 -> 4 -> 3 -> 5"
+    ],
+    "explanation": "createState() вызывается первым для создания State объекта, затем initState() для инициализации, build() для отрисовки, didUpdateWidget() при обновлении и dispose() при уничтожении"
+  },
+  {
+    "question": "В чем основное различие между Stateless и Stateful виджетами?\n\n*Выберите наиболее точный ответ*",
+    "correct_answer": "Stateful виджеты могут изменять свое состояние во время жизни виджета, а Stateless - нет",
+    "incorrect_answers": [
+      "Stateless виджеты быстрее чем Stateful",
+      "Stateful виджеты всегда имеют состояние",
+      "Stateless виджеты не могут иметь параметры"
+    ],
+    "explanation": "Stateless виджеты иммутабельны и не могут изменять свое внутреннее состояние после создания, в то время как Stateful виджеты могут динамически изменять свое состояние"
+  }
+] 
