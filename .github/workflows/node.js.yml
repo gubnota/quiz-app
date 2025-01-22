@@ -33,7 +33,7 @@ jobs:
       run: bun i
 
     - name: Build with Bun
-      run: bun build
+      run: bun run build
 
     - name: Run tests with Bun
       run: bun test
