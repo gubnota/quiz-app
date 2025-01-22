@@ -6,7 +6,7 @@
 const flattenCategories = (categories, level = 0) => {
   return categories
     .map((category) => {
-      const indent = "º".repeat(level);
+      const indent = "→".repeat(level);
       const flatCategory = {
         key: category.key,
         text: `${indent}${category.text}`,
