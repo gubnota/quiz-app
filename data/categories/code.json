@@ -1,0 +1,28 @@
+[
+  {
+    "question": "What will be the output of this JavaScript code?\n```javascript\nconsole.log(typeof typeof 1);\n```",
+    "correct_answer": "string",
+    "incorrect_answers": ["number", "undefined", "object"],
+    "explanation": "typeof 1 returns 'number', then typeof 'number' returns 'string'"
+  },
+  {
+    "question": "What does this React code render?\n```jsx\nfunction Welcome({name}) {\n  return <h1>Hello, {name}</h1>;\n}\n```",
+    "correct_answer": "A heading with 'Hello' followed by the name prop",
+    "incorrect_answers": [
+      "Just the text 'Hello'",
+      "An error because of invalid syntax",
+      "undefined"
+    ],
+    "explanation": "This is a functional component that renders an h1 element with 'Hello' and the passed name prop"
+  },
+  {
+    "question": "What's wrong with this code?\n```python\ndef add(x, y)\n    return x + y\n```",
+    "correct_answer": "Missing colon after function definition",
+    "incorrect_answers": [
+      "Wrong indentation",
+      "Missing parentheses",
+      "Invalid function name"
+    ],
+    "explanation": "Python function definitions need a colon (:) after the parameters"
+  }
+] 

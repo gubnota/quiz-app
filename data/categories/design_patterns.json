@@ -1,0 +1,42 @@
+[
+  {
+    "question": "Какой паттерн проектирования используется в этом коде?\n```dart\nabstract class Creator {\n  Product createProduct();\n  void someOperation() {\n    Product product = createProduct();\n    product.doStuff();\n  }\n}\n```",
+    "correct_answer": "Factory Method",
+    "incorrect_answers": [
+      "Abstract Factory",
+      "Builder",
+      "Prototype"
+    ],
+    "explanation": "Factory Method определяет интерфейс для создания объекта, но позволяет подклассам решать, какой класс инстанцировать"
+  },
+  {
+    "question": "Which design pattern does this Dart code implement?\n```dart\nabstract class Pizza {\n  String getDescription();\n  double getCost();\n}\n\nclass PlainPizza extends Pizza {\n  String getDescription() => 'Plain Pizza';\n  double getCost() => 4.00;\n}\n\nabstract class ToppingDecorator extends Pizza {\n  final Pizza pizza;\n  ToppingDecorator(this.pizza);\n}\n\nclass Cheese extends ToppingDecorator {\n  Cheese(Pizza pizza) : super(pizza);\n  \n  String getDescription() => '${pizza.getDescription()}, Cheese';\n  double getCost() => pizza.getCost() + 1.50;\n}\n```",
+    "correct_answer": "Decorator Pattern",
+    "incorrect_answers": [
+      "Factory Pattern",
+      "Builder Pattern",
+      "Composite Pattern"
+    ],
+    "explanation": "This is the Decorator pattern, which allows adding new behaviors to objects dynamically by placing them inside wrapper objects"
+  },
+  {
+    "question": "What design pattern should be used to implement this scenario in Dart?\n```dart\n// Need to create different types of documents (PDF, Word, Text)\n// Each document type needs its own save and open operations\n// New document types may be added in the future\n```",
+    "correct_answer": "Abstract Factory Pattern",
+    "incorrect_answers": [
+      "Singleton Pattern",
+      "Observer Pattern",
+      "Command Pattern"
+    ],
+    "explanation": "Abstract Factory is ideal when you need a way to create families of related objects without specifying their concrete classes"
+  },
+  {
+    "question": "Identify the problem with this Builder pattern implementation:\n```dart\nclass Pizza {\n  String dough;\n  String sauce;\n  String topping;\n  \n  Pizza(this.dough, this.sauce, this.topping);\n}\n\nclass PizzaBuilder {\n  Pizza build() {\n    return Pizza('thin', 'tomato', 'cheese');\n  }\n}\n```",
+    "correct_answer": "Builder doesn't allow customization of individual elements",
+    "incorrect_answers": [
+      "Wrong constructor syntax",
+      "Missing abstract class",
+      "Incorrect return type"
+    ],
+    "explanation": "A proper Builder pattern should have methods to set each element individually (setDough, setSauce, setTopping) before building"
+  }
+] 
