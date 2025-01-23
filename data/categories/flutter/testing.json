@@ -1,0 +1,202 @@
+[
+    {
+      "question": "Что такое **модульный тест** (unit test) в Flutter? Приведите пример кода.\n```dart\nvoid main() {\n  test('Проверка сложения двух чисел', () {\n    expect(add(2, 3), equals(5));\n  });\n}\n\nint add(int a, int b) {\n  return a + b;\n}\n```",
+      "correct_answer": "Модульный тест проверяет одну функцию, метод или класс.",
+      "incorrect_answers": [
+        "Модульный тест проверяет весь пользовательский интерфейс.",
+        "Модульный тест выполняется только на реальном устройстве.",
+        "Модульный тест используется для проверки производительности."
+      ],
+      "explanation": "Модульный тест изолированно проверяет работу одной функции, метода или класса, не затрагивая внешние зависимости."
+    },
+    {
+      "question": "Что такое **виджет тест** (widget test) в Flutter? Приведите пример кода.\n```dart\nvoid main() {\n  testWidgets('Проверка отображения текста', (WidgetTester tester) async {\n    await tester.pumpWidget(MaterialApp(home: Text('Hello')));\n    expect(find.text('Hello'), findsOneWidget);\n  });\n}\n```",
+      "correct_answer": "Виджет тест проверяет отображение и взаимодействие одного виджета.",
+      "incorrect_answers": [
+        "Виджет тест проверяет всю бизнес-логику приложения.",
+        "Виджет тест выполняется только на реальном устройстве.",
+        "Виджет тест используется для проверки API."
+      ],
+      "explanation": "Виджет тест проверяет, как виджет отображается и взаимодействует с пользователем в тестовой среде."
+    },
+    {
+      "question": "Что такое **интеграционный тест** (integration test) в Flutter? Приведите пример кода.\n```dart\nvoid main() {\n  IntegrationTestWidgetsFlutterBinding.ensureInitialized();\n\n  testWidgets('Проверка навигации', (WidgetTester tester) async {\n    await tester.pumpWidget(MyApp());\n    await tester.tap(find.text('Next'));\n    await tester.pumpAndSettle();\n    expect(find.text('Second Screen'), findsOneWidget);\n  });\n}\n```",
+      "correct_answer": "Интеграционный тест проверяет работу всего приложения или его части на реальном устройстве.",
+      "incorrect_answers": [
+        "Интеграционный тест проверяет только одну функцию.",
+        "Интеграционный тест выполняется только в изолированной среде.",
+        "Интеграционный тест не требует реального устройства."
+      ],
+      "explanation": "Интеграционный тест проверяет, как различные части приложения работают вместе, и выполняется на реальном устройстве или эмуляторе."
+    },
+    {
+      "question": "Какой пакет используется для модульного тестирования в Flutter?",
+      "correct_answer": "test",
+      "incorrect_answers": [
+        "flutter_test",
+        "integration_test",
+        "mockito"
+      ],
+      "explanation": "Пакет `test` используется для написания модульных тестов в Dart и Flutter."
+    },
+    {
+      "question": "Какой пакет используется для виджет тестирования в Flutter?",
+      "correct_answer": "flutter_test",
+      "incorrect_answers": [
+        "test",
+        "integration_test",
+        "mockito"
+      ],
+      "explanation": "Пакет `flutter_test` предоставляет инструменты для тестирования виджетов в Flutter."
+    },
+    {
+      "question": "Какой пакет используется для интеграционного тестирования в Flutter?",
+      "correct_answer": "integration_test",
+      "incorrect_answers": [
+        "test",
+        "flutter_test",
+        "mockito"
+      ],
+      "explanation": "Пакет `integration_test` используется для написания интеграционных тестов в Flutter."
+    },
+    {
+      "question": "Какой метод используется для проверки наличия виджета в виджет тесте?\n```dart\nexpect(find.text('Hello'), findsOneWidget);\n```",
+      "correct_answer": "expect с использованием find.text",
+      "incorrect_answers": [
+        "assert",
+        "verify",
+        "check"
+      ],
+      "explanation": "Метод `expect` используется вместе с `find.text` для проверки наличия текста на экране."
+    },
+    {
+      "question": "Какой метод используется для симуляции пользовательского взаимодействия в виджет тесте?\n```dart\nawait tester.tap(find.text('Button'));\n```",
+      "correct_answer": "tester.tap",
+      "incorrect_answers": [
+        "tester.click",
+        "tester.press",
+        "tester.interact"
+      ],
+      "explanation": "Метод `tester.tap` используется для симуляции нажатия на виджет."
+    },
+    {
+      "question": "Какой метод используется для обновления состояния виджета в тесте?\n```dart\nawait tester.pump();\n```",
+      "correct_answer": "tester.pump",
+      "incorrect_answers": [
+        "tester.update",
+        "tester.refresh",
+        "tester.rebuild"
+      ],
+      "explanation": "Метод `tester.pump` обновляет состояние виджета в тестовой среде."
+    },
+    {
+      "question": "Какой метод используется для проверки отсутствия виджета в виджет тесте?\n```dart\nexpect(find.text('Hello'), findsNothing);\n```",
+      "correct_answer": "expect с использованием findsNothing",
+      "incorrect_answers": [
+        "expect с использованием findsOneWidget",
+        "assert",
+        "verify"
+      ],
+      "explanation": "Метод `expect` с `findsNothing` проверяет, что виджет отсутствует на экране."
+    },
+    {
+      "question": "Какой метод используется для симуляции длительного взаимодействия в виджет тесте?\n```dart\nawait tester.pumpAndSettle();\n```",
+      "correct_answer": "tester.pumpAndSettle",
+      "incorrect_answers": [
+        "tester.pump",
+        "tester.wait",
+        "tester.delay"
+      ],
+      "explanation": "Метод `tester.pumpAndSettle` используется для симуляции длительного взаимодействия и ожидания завершения всех анимаций."
+    },
+    {
+      "question": "Какой метод используется для проверки наличия нескольких виджетов в виджет тесте?\n```dart\nexpect(find.text('Hello'), findsNWidgets(2));\n```",
+      "correct_answer": "expect с использованием findsNWidgets",
+      "incorrect_answers": [
+        "expect с использованием findsOneWidget",
+        "assert",
+        "verify"
+      ],
+      "explanation": "Метод `expect` с `findsNWidgets` проверяет наличие определенного количества виджетов на экране."
+    },
+    {
+      "question": "Какой метод используется для проверки исключений в модульном тесте?\n```dart\nexpect(() => throw Exception(), throwsException);\n```",
+      "correct_answer": "expect с использованием throwsException",
+      "incorrect_answers": [
+        "assert",
+        "verify",
+        "check"
+      ],
+      "explanation": "Метод `expect` с `throwsException` проверяет, что код выбрасывает исключение."
+    },
+    {
+      "question": "Какой метод используется для мокирования зависимостей в модульном тесте?\n```dart\nclass MockUserRepository extends Mock implements UserRepository {}\n```",
+      "correct_answer": "Использование пакета mockito",
+      "incorrect_answers": [
+        "Использование пакета test",
+        "Использование пакета flutter_test",
+        "Использование пакета integration_test"
+      ],
+      "explanation": "Пакет `mockito` используется для создания мок-объектов в модульных тестах."
+    },
+    {
+      "question": "Какой метод используется для проверки вызова метода в мокированном объекте?\n```dart\nverify(mockUserRepository.fetchUser(1)).called(1);\n```",
+      "correct_answer": "verify",
+      "incorrect_answers": [
+        "expect",
+        "assert",
+        "check"
+      ],
+      "explanation": "Метод `verify` используется для проверки вызова метода в мокированном объекте."
+    },
+    {
+      "question": "Какой метод используется для настройки возвращаемого значения мокированного объекта?\n```dart\nwhen(mockUserRepository.fetchUser(1)).thenReturn(User());\n```",
+      "correct_answer": "when",
+      "incorrect_answers": [
+        "expect",
+        "verify",
+        "mock"
+      ],
+      "explanation": "Метод `when` используется для настройки возвращаемого значения мокированного объекта."
+    },
+    {
+      "question": "Какой метод используется для проверки производительности в интеграционном тесте?\n```dart\nawait tester.binding.window.physicalSizeTestValue = Size(1080, 1920);\n```",
+      "correct_answer": "Использование tester.binding.window",
+      "incorrect_answers": [
+        "Использование tester.pump",
+        "Использование tester.tap",
+        "Использование tester.pumpAndSettle"
+      ],
+      "explanation": "Метод `tester.binding.window` используется для настройки параметров тестовой среды, таких как размер экрана."
+    },
+    {
+      "question": "Какой метод используется для проверки навигации в интеграционном тесте?\n```dart\nawait tester.tap(find.text('Next'));\nawait tester.pumpAndSettle();\n```",
+      "correct_answer": "tester.tap и tester.pumpAndSettle",
+      "incorrect_answers": [
+        "tester.pump",
+        "tester.click",
+        "tester.navigate"
+      ],
+      "explanation": "Методы `tester.tap` и `tester.pumpAndSettle` используются для симуляции навигации и проверки перехода между экранами."
+    },
+    {
+      "question": "Какой метод используется для проверки состояния виджета в виджет тесте?\n```dart\nfinal state = tester.state(find.byType(MyWidget));\n```",
+      "correct_answer": "tester.state",
+      "incorrect_answers": [
+        "tester.find",
+        "tester.check",
+        "tester.verify"
+      ],
+      "explanation": "Метод `tester.state` используется для получения состояния виджета в тестовой среде."
+    },
+    {
+      "question": "Какой метод используется для проверки анимаций в виджет тесте?\n```dart\nawait tester.pump(Duration(seconds: 1));\n```",
+      "correct_answer": "tester.pump с указанием длительности",
+      "incorrect_answers": [
+        "tester.pumpAndSettle",
+        "tester.wait",
+        "tester.delay"
+      ],
+      "explanation": "Метод `tester.pump` с указанием длительности используется для проверки анимаций и обновления состояния виджета."
+    }
+  ]

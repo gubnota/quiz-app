@@ -1,0 +1,202 @@
+[
+  {
+    "question": "What is the main purpose of state management in Flutter?",
+    "correct_answer": "To manage and share application state efficiently across widgets.",
+    "incorrect_answers": [
+      "To handle navigation between screens.",
+      "To define the widget tree structure.",
+      "To optimize animations in the app."
+    ],
+    "explanation": "State management in Flutter ensures that changes in application state are efficiently shared and reflected across relevant widgets."
+  },
+  {
+    "question": "Which statement best describes the Provider package in Flutter?",
+    "correct_answer": "Provider is a wrapper around InheritedWidget that simplifies state sharing across the widget tree.",
+    "incorrect_answers": [
+      "Provider is a built-in state management tool in Flutter.",
+      "Provider is used only for managing local state in a widget.",
+      "Provider does not support listening for state changes."
+    ],
+    "explanation": "Provider is a third-party package that simplifies state sharing in Flutter by using InheritedWidget under the hood."
+  },
+  {
+    "question": "What is the main feature of Riverpod compared to Provider?",
+    "correct_answer": "Riverpod provides compile-time safety and supports fine-grained dependency management.",
+    "incorrect_answers": [
+      "Riverpod is an official Flutter package, while Provider is not.",
+      "Riverpod does not allow scoped state management.",
+      "Riverpod only supports global state management."
+    ],
+    "explanation": "Riverpod enhances Provider with compile-time safety, improved dependency management, and the ability to access state without relying on BuildContext."
+  },
+  {
+    "question": "What is the key principle of the BLoC (Business Logic Component) pattern?",
+    "correct_answer": "Separating UI components from business logic using streams.",
+    "incorrect_answers": [
+      "Storing application state in a single global object.",
+      "Managing state using immutable objects only.",
+      "Updating state directly in the widget's `build` method."
+    ],
+    "explanation": "The BLoC pattern separates UI from business logic using streams to handle events and state updates, ensuring a clear separation of concerns."
+  },
+  {
+    "question": "What is the role of events in the BLoC pattern?",
+    "correct_answer": "To trigger changes in state by passing them to the BLoC.",
+    "incorrect_answers": [
+      "To render UI components directly.",
+      "To store application data.",
+      "To handle dependency injection in the app."
+    ],
+    "explanation": "In the BLoC pattern, events are inputs that trigger changes in the state by being processed within the BLoC."
+  },
+  {
+    "question": "Which of the following best describes Redux in Flutter?",
+    "correct_answer": "Redux is a state management approach that stores the entire app's state in a single store.",
+    "incorrect_answers": [
+      "Redux is a built-in state management system in Flutter.",
+      "Redux allows state to be updated directly in widgets.",
+      "Redux does not support middleware for side effects."
+    ],
+    "explanation": "Redux uses a single global store to hold the entire app's state and updates it via pure reducer functions in response to dispatched actions."
+  },
+  {
+    "question": "Which state management solution is best for large-scale applications with complex state requirements?",
+    "correct_answer": "Redux or BLoC",
+    "incorrect_answers": [
+      "Provider",
+      "Riverpod",
+      "InheritedWidget"
+    ],
+    "explanation": "Redux and BLoC are well-suited for large-scale applications due to their structured approach to handling complex state requirements and scalability."
+  },
+  {
+    "question": "What is the role of middleware in Redux?",
+    "correct_answer": "To handle side effects such as logging or asynchronous operations.",
+    "incorrect_answers": [
+      "To initialize the global state in Redux.",
+      "To update the state directly.",
+      "To dispatch actions to the reducers."
+    ],
+    "explanation": "Middleware in Redux intercepts dispatched actions, allowing side effects (e.g., API calls, logging) to be handled before the action reaches the reducers."
+  },
+  {
+    "question": "Which feature does Riverpod introduce that is not available in Provider?",
+    "correct_answer": "Support for accessing state without BuildContext.",
+    "incorrect_answers": [
+      "Scoped state management.",
+      "Listening to state changes.",
+      "Using ChangeNotifier for state updates."
+    ],
+    "explanation": "Riverpod allows accessing state independently of BuildContext, which makes it easier to use in scenarios where BuildContext is unavailable."
+  },
+  {
+    "question": "What will happen if you update state in the `build` method of a widget in Flutter?",
+    "correct_answer": "It will cause an infinite rebuild loop and crash the app.",
+    "incorrect_answers": [
+      "It will update the UI without any issues.",
+      "It will only trigger one rebuild of the widget.",
+      "It will log a warning but continue running."
+    ],
+    "explanation": "Updating state in the `build` method causes an infinite rebuild loop, as the state update triggers a rebuild, which in turn tries to update the state again."
+  },
+  {
+    "question": "How do you use the Provider package to share state across the widget tree? Example:",
+    "correct_answer": "Use `ChangeNotifier` with `ChangeNotifierProvider` to notify listeners about state updates.",
+    "incorrect_answers": [
+      "Use a global variable to manage state.",
+      "Use `FutureBuilder` for sharing state.",
+      "Use `setState` at the root of the widget tree."
+    ],
+    "explanation": "Provider integrates with Flutter's widget tree, making it easy to manage and share state. Here's an example:\n\n```dart\nclass Counter with ChangeNotifier {\n  int _count = 0;\n  int get count => _count;\n\n  void increment() {\n    _count++;\n    notifyListeners();\n  }\n}\n\nvoid main() {\n  runApp(\n    ChangeNotifierProvider(\n      create: (_) => Counter(),\n      child: MyApp(),\n    ),\n  );\n}\n\nclass MyApp extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      home: Scaffold(\n        appBar: AppBar(title: Text('Provider Example')),\n        body: Column(\n          mainAxisAlignment: MainAxisAlignment.center,\n          children: [\n            Text('Count: ${Provider.of<Counter>(context).count}'),\n            ElevatedButton(\n              onPressed: () => Provider.of<Counter>(context, listen: false).increment(),\n              child: Text('Increment'),\n            ),\n          ],\n        ),\n      ),\n    );\n  }\n}\n```"
+  },
+  {
+    "question": "What is an example of using Riverpod for state management in Flutter?",
+    "correct_answer": "Define a `StateProvider` and use `ConsumerWidget` to listen to state changes.",
+    "incorrect_answers": [
+      "Use `InheritedWidget` to create a scoped state.",
+      "Directly call `setState` inside the widget.",
+      "Use `BLoC` for state updates."
+    ],
+    "explanation": "Riverpod simplifies state management with providers and eliminates the need for BuildContext. Here's an example:\n\n```dart\nfinal counterProvider = StateProvider<int>((ref) => 0);\n\nvoid main() {\n  runApp(ProviderScope(child: MyApp()));\n}\n\nclass MyApp extends StatelessWidget {\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      home: Scaffold(\n        appBar: AppBar(title: Text('Riverpod Example')),\n        body: Center(\n          child: Consumer(\n            builder: (context, ref, _) {\n              final count = ref.watch(counterProvider);\n              return Column(\n                mainAxisAlignment: MainAxisAlignment.center,\n                children: [\n                  Text('Count: $count'),\n                  ElevatedButton(\n                    onPressed: () => ref.read(counterProvider.notifier).state++,\n                    child: Text('Increment'),\n                  ),\n                ],\n              );\n            },\n          ),\n        ),\n      ),\n    );\n  }\n}\n```"
+  },
+  {
+    "question": "How can you implement the BLoC pattern in Flutter? Example:",
+    "correct_answer": "Create a BLoC class with `StreamController` for managing state and events.",
+    "incorrect_answers": [
+      "Use `setState` directly in the widget tree.",
+      "Create a global variable for state management.",
+      "Use `FutureBuilder` to handle state updates."
+    ],
+    "explanation": "The BLoC pattern uses `Stream` and `StreamController` to handle state and events. Here's an example:\n\n```dart\nimport 'dart:async';\n\nclass CounterBloc {\n  final _counterController = StreamController<int>();\n  int _counter = 0;\n\n  Stream<int> get counterStream => _counterController.stream;\n\n  void increment() {\n    _counter++;\n    _counterController.sink.add(_counter);\n  }\n\n  void dispose() {\n    _counterController.close();\n  }\n}\n\nvoid main() {\n  runApp(MyApp());\n}\n\nclass MyApp extends StatelessWidget {\n  final CounterBloc bloc = CounterBloc();\n\n  @override\n  Widget build(BuildContext context) {\n    return MaterialApp(\n      home: Scaffold(\n        appBar: AppBar(title: Text('BLoC Example')),\n        body: StreamBuilder<int>(\n          stream: bloc.counterStream,\n          initialData: 0,\n          builder: (context, snapshot) {\n            return Center(\n              child: Column(\n                mainAxisAlignment: MainAxisAlignment.center,\n                children: [\n                  Text('Count: ${snapshot.data}'),\n                  ElevatedButton(\n                    onPressed: bloc.increment,\n                    child: Text('Increment'),\n                  ),\n                ],\n              ),\n            );\n          },\n        ),\n      ),\n    );\n  }\n}\n```"
+  },
+  {
+    "question": "What is an example of using Redux for state management in Flutter?",
+    "correct_answer": "Use a `Store` with `Reducer` functions and dispatch actions to update state.",
+    "incorrect_answers": [
+      "Directly modify the state inside the widgets.",
+      "Use `setState` for handling state updates.",
+      "Create a `Future` for state management."
+    ],
+    "explanation": "Redux uses a `Store` to manage a single source of truth, and reducers handle state updates. Here's an example:\n\n```dart\nimport 'package:flutter/material.dart';\nimport 'package:flutter_redux/flutter_redux.dart';\nimport 'package:redux/redux.dart';\n\n// Actions\nclass IncrementAction {}\n\n// Reducer\nint counterReducer(int state, dynamic action) {\n  if (action is IncrementAction) {\n    return state + 1;\n  }\n  return state;\n}\n\nvoid main() {\n  final store = Store<int>(counterReducer, initialState: 0);\n  runApp(MyApp(store));\n}\n\nclass MyApp extends StatelessWidget {\n  final Store<int> store;\n\n  MyApp(this.store);\n\n  @override\n  Widget build(BuildContext context) {\n    return StoreProvider(\n      store: store,\n      child: MaterialApp(\n        home: Scaffold(\n          appBar: AppBar(title: Text('Redux Example')),\n          body: StoreConnector<int, int>(\n            converter: (store) => store.state,\n            builder: (context, count) {\n              return Center(\n                child: Column(\n                  mainAxisAlignment: MainAxisAlignment.center,\n                  children: [\n                    Text('Count: $count'),\n                    ElevatedButton(\n                      onPressed: () => store.dispatch(IncrementAction()),\n                      child: Text('Increment'),\n                    ),\n                  ],\n                ),\n              );\n            },\n          ),\n        ),\n      ),\n    );\n  }\n}\n```"
+  },
+  {
+    "question": "What is the purpose of `InheritedWidget` in Flutter?",
+    "correct_answer": "To efficiently propagate data down the widget tree.",
+    "incorrect_answers": [
+      "To manage animations in the app.",
+      "To handle navigation between screens.",
+      "To define the layout of the UI."
+    ],
+    "explanation": "`InheritedWidget` is used to propagate data down the widget tree efficiently, allowing widgets to access shared data without passing it explicitly."
+  },
+  {
+    "question": "What is the difference between `setState` and `Provider` in Flutter?",
+    "correct_answer": "`setState` is used for local state management, while `Provider` is used for global or shared state management.",
+    "incorrect_answers": [
+      "`setState` is used for animations, while `Provider` is used for navigation.",
+      "`setState` is faster than `Provider`.",
+      "`Provider` cannot be used with `StatefulWidget`."
+    ],
+    "explanation": "`setState` is used to manage state within a single widget, while `Provider` is used to share state across multiple widgets in the widget tree."
+  },
+  {
+    "question": "What is the purpose of `ChangeNotifier` in Flutter?",
+    "correct_answer": "To notify listeners when the state changes.",
+    "incorrect_answers": [
+      "To define the layout of the UI.",
+      "To handle navigation between screens.",
+      "To manage animations in the app."
+    ],
+    "explanation": "`ChangeNotifier` is used to notify listeners when the state changes, making it useful for state management with `Provider`."
+  },
+  {
+    "question": "What is the purpose of `ValueNotifier` in Flutter?",
+    "correct_answer": "To hold a single value and notify listeners when it changes.",
+    "incorrect_answers": [
+      "To define the layout of the UI.",
+      "To handle navigation between screens.",
+      "To manage animations in the app."
+    ],
+    "explanation": "`ValueNotifier` is used to hold a single value and notify listeners when it changes, making it useful for simple state management."
+  },
+  {
+    "question": "What is the purpose of `StreamBuilder` in Flutter?",
+    "correct_answer": "To rebuild a widget when data from a `Stream` changes.",
+    "incorrect_answers": [
+      "To define the layout of the UI.",
+      "To handle navigation between screens.",
+      "To manage animations in the app."
+    ],
+    "explanation": "`StreamBuilder` is used to rebuild a widget whenever data from a `Stream` changes, making it useful for reactive programming."
+  },
+  {
+    "question": "What is the purpose of `FutureBuilder` in Flutter?",
+    "correct_answer": "To rebuild a widget when a `Future` completes.",
+    "incorrect_answers": [
+      "To define the layout of the UI.",
+      "To handle navigation between screens.",
+      "To manage animations in the app."
+    ],
+    "explanation": "`FutureBuilder` is used to rebuild a widget when a `Future` completes, making it useful for handling asynchronous operations."
+  }
+]

@@ -1,0 +1,202 @@
+[
+    {
+      "question": "Какой инструмент используется для анализа производительности в Flutter?",
+      "correct_answer": "Flutter DevTools",
+      "incorrect_answers": [
+        "Android Studio Profiler",
+        "Xcode Instruments",
+        "Chrome DevTools"
+      ],
+      "explanation": "Flutter DevTools предоставляет инструменты для анализа производительности, включая CPU, память и сетевые запросы."
+    },
+    {
+      "question": "Какой метод используется для ручного запуска сборки мусора в Dart?",
+      "correct_answer": "Невозможно вручную запустить сборку мусора.",
+      "incorrect_answers": [
+        "System.gc()",
+        "Dart.gc()",
+        "Flutter.runGC()"
+      ],
+      "explanation": "Dart автоматически управляет сборкой мусора, и разработчики не могут вручную запустить этот процесс."
+    },
+    {
+      "question": "Какой инструмент используется для отладки утечек памяти в Flutter?",
+      "correct_answer": "Flutter DevTools Memory Tab",
+      "incorrect_answers": [
+        "Android Studio Logcat",
+        "Xcode Memory Graph",
+        "Chrome Performance Tab"
+      ],
+      "explanation": "Flutter DevTools предоставляет вкладку Memory для анализа утечек памяти."
+    },
+    {
+      "question": "Какой метод используется для оптимизации перерисовки виджетов?",
+      "correct_answer": "Использование const конструкторов.",
+      "incorrect_answers": [
+        "Использование StatefulWidget везде.",
+        "Увеличение частоты кадров.",
+        "Отключение анимаций."
+      ],
+      "explanation": "Использование const конструкторов помогает Flutter избежать лишних перерисовок."
+    },
+    {
+      "question": "Какой метод используется для анализа производительности рендеринга?",
+      "correct_answer": "Flutter DevTools Performance Tab",
+      "incorrect_answers": [
+        "Android Studio CPU Profiler",
+        "Xcode Time Profiler",
+        "Chrome Network Tab"
+      ],
+      "explanation": "Flutter DevTools предоставляет вкладку Performance для анализа рендеринга."
+    },
+    {
+      "question": "Какой метод используется для измерения времени выполнения кода?",
+      "correct_answer": "Stopwatch",
+      "incorrect_answers": [
+        "Timer",
+        "DateTime.now()",
+        "PerformanceMonitor"
+      ],
+      "explanation": "Stopwatch используется для измерения времени выполнения кода."
+    },
+    {
+      "question": "Какой метод используется для оптимизации загрузки изображений?",
+      "correct_answer": "Использование кэширования с помощью CachedNetworkImage.",
+      "incorrect_answers": [
+        "Увеличение размера изображений.",
+        "Отключение кэширования.",
+        "Использование только локальных изображений."
+      ],
+      "explanation": "CachedNetworkImage кэширует изображения для улучшения производительности."
+    },
+    {
+      "question": "Какой метод используется для уменьшения размера APK?",
+      "correct_answer": "Использование ProGuard или R8.",
+      "incorrect_answers": [
+        "Увеличение количества ресурсов.",
+        "Отключение сжатия.",
+        "Использование только debug-сборки."
+      ],
+      "explanation": "ProGuard и R8 уменьшают размер APK за счет удаления неиспользуемого кода."
+    },
+    {
+      "question": "Какой метод используется для анализа сетевых запросов?",
+      "correct_answer": "Flutter DevTools Network Tab",
+      "incorrect_answers": [
+        "Android Studio Profiler",
+        "Xcode Instruments",
+        "Chrome DevTools"
+      ],
+      "explanation": "Flutter DevTools предоставляет вкладку Network для анализа сетевых запросов."
+    },
+    {
+      "question": "Какой метод используется для оптимизации анимаций?",
+      "correct_answer": "Использование анимаций на основе Physics.",
+      "incorrect_answers": [
+        "Увеличение длительности анимаций.",
+        "Отключение всех анимаций.",
+        "Использование только кастомных анимаций."
+      ],
+      "explanation": "Анимации на основе Physics выглядят более естественно и оптимизированы для производительности."
+    },
+    {
+      "question": "Какой метод используется для анализа использования CPU?",
+      "correct_answer": "Flutter DevTools CPU Profiler",
+      "incorrect_answers": [
+        "Android Studio Memory Profiler",
+        "Xcode Network Profiler",
+        "Chrome Performance Tab"
+      ],
+      "explanation": "Flutter DevTools предоставляет CPU Profiler для анализа использования процессора."
+    },
+    {
+      "question": "Какой метод используется для оптимизации работы с большими списками?",
+      "correct_answer": "Использование ListView.builder.",
+      "incorrect_answers": [
+        "Использование ListView без builder.",
+        "Использование GridView.",
+        "Использование Column."
+      ],
+      "explanation": "ListView.builder создает элементы списка только по мере необходимости, что улучшает производительность."
+    },
+    {
+      "question": "Какой метод используется для анализа использования памяти?",
+      "correct_answer": "Flutter DevTools Memory Tab",
+      "incorrect_answers": [
+        "Android Studio CPU Profiler",
+        "Xcode Time Profiler",
+        "Chrome Network Tab"
+      ],
+      "explanation": "Flutter DevTools предоставляет вкладку Memory для анализа использования памяти."
+    },
+    {
+      "question": "Какой метод используется для оптимизации работы с сетью?",
+      "correct_answer": "Использование кэширования и сжатия данных.",
+      "incorrect_answers": [
+        "Увеличение количества запросов.",
+        "Отключение кэширования.",
+        "Использование только локальных данных."
+      ],
+      "explanation": "Кэширование и сжатие данных уменьшают нагрузку на сеть и улучшают производительность."
+    },
+    {
+      "question": "Какой метод используется для анализа производительности в релизной сборке?",
+      "correct_answer": "Использование Flutter DevTools в режиме профилирования.",
+      "incorrect_answers": [
+        "Использование debug-сборки.",
+        "Использование только логов.",
+        "Использование Android Studio Profiler."
+      ],
+      "explanation": "Flutter DevTools в режиме профилирования предоставляет точные данные о производительности."
+    },
+    {
+      "question": "Какой метод используется для оптимизации работы с базой данных?",
+      "correct_answer": "Использование индексов и пакетной обработки.",
+      "incorrect_answers": [
+        "Увеличение количества запросов.",
+        "Отключение индексов.",
+        "Использование только локальных данных."
+      ],
+      "explanation": "Индексы и пакетная обработка улучшают производительность работы с базой данных."
+    },
+    {
+      "question": "Какой метод используется для анализа производительности анимаций?",
+      "correct_answer": "Flutter DevTools Performance Tab",
+      "incorrect_answers": [
+        "Android Studio CPU Profiler",
+        "Xcode Time Profiler",
+        "Chrome Network Tab"
+      ],
+      "explanation": "Flutter DevTools предоставляет вкладку Performance для анализа анимаций."
+    },
+    {
+      "question": "Какой метод используется для оптимизации работы с изображениями?",
+      "correct_answer": "Использование Image.asset для локальных изображений.",
+      "incorrect_answers": [
+        "Использование только сетевых изображений.",
+        "Увеличение размера изображений.",
+        "Отключение кэширования."
+      ],
+      "explanation": "Image.asset оптимизирован для работы с локальными изображениями."
+    },
+    {
+      "question": "Какой метод используется для анализа производительности в релизной сборке?",
+      "correct_answer": "Использование Flutter DevTools в режиме профилирования.",
+      "incorrect_answers": [
+        "Использование debug-сборки.",
+        "Использование только логов.",
+        "Использование Android Studio Profiler."
+      ],
+      "explanation": "Flutter DevTools в режиме профилирования предоставляет точные данные о производительности."
+    },
+    {
+      "question": "Какой метод используется для оптимизации работы с большими данными?",
+      "correct_answer": "Использование Pagination или Lazy Loading.",
+      "incorrect_answers": [
+        "Загрузка всех данных сразу.",
+        "Отключение кэширования.",
+        "Использование только локальных данных."
+      ],
+      "explanation": "Pagination и Lazy Loading уменьшают нагрузку на память и улучшают производительность."
+    }
+  ]

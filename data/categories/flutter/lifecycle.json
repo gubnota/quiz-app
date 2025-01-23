@@ -1,0 +1,202 @@
+[
+    {
+      "question": "Какой метод вызывается при создании StatefulWidget?",
+      "correct_answer": "createState",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "createState вызывается при создании StatefulWidget для инициализации состояния."
+    },
+    {
+      "question": "Какой метод вызывается при удалении StatefulWidget?",
+      "correct_answer": "dispose",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "deactivate"
+      ],
+      "explanation": "dispose вызывается при удалении StatefulWidget для освобождения ресурсов."
+    },
+    {
+      "question": "Какой метод вызывается при первом создании StatefulWidget?",
+      "correct_answer": "initState",
+      "incorrect_answers": [
+        "createState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "initState вызывается при первом создании StatefulWidget."
+    },
+    {
+      "question": "Какой метод вызывается при обновлении StatefulWidget?",
+      "correct_answer": "didUpdateWidget",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "didUpdateWidget вызывается при обновлении StatefulWidget."
+    },
+    {
+      "question": "Какой метод вызывается при изменении состояния StatefulWidget?",
+      "correct_answer": "setState",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "setState вызывается для обновления состояния StatefulWidget."
+    },
+    {
+      "question": "Какой метод вызывается при удалении StatefulWidget из дерева?",
+      "correct_answer": "deactivate",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "deactivate вызывается при удалении StatefulWidget из дерева."
+    },
+    {
+      "question": "Какой метод вызывается при повторном добавлении StatefulWidget в дерево?",
+      "correct_answer": "reassemble",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "reassemble вызывается при повторном добавлении StatefulWidget в дерево."
+    },
+    {
+      "question": "Какой метод вызывается при изменении зависимостей StatefulWidget?",
+      "correct_answer": "didChangeDependencies",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "didChangeDependencies вызывается при изменении зависимостей StatefulWidget."
+    },
+    {
+      "question": "Какой метод вызывается при изменении конфигурации StatefulWidget?",
+      "correct_answer": "didChangeAppLifecycleState",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "didChangeAppLifecycleState вызывается при изменении конфигурации StatefulWidget."
+    },
+    {
+      "question": "Какой метод вызывается при изменении состояния приложения?",
+      "correct_answer": "didChangeAppLifecycleState",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "didChangeAppLifecycleState вызывается при изменении состояния приложения."
+    },
+    {
+      "question": "Какой метод вызывается при изменении состояния виджета?",
+      "correct_answer": "setState",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "setState вызывается для обновления состояния виджета."
+    },
+    {
+      "question": "Какой метод вызывается при изменении состояния приложения на паузу?",
+      "correct_answer": "didChangeAppLifecycleState",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "didChangeAppLifecycleState вызывается при изменении состояния приложения на паузу."
+    },
+    {
+      "question": "Какой метод вызывается при изменении состояния приложения на активное?",
+      "correct_answer": "didChangeAppLifecycleState",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "didChangeAppLifecycleState вызывается при изменении состояния приложения на активное."
+    },
+    {
+      "question": "Какой метод вызывается при изменении состояния приложения на неактивное?",
+      "correct_answer": "didChangeAppLifecycleState",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "didChangeAppLifecycleState вызывается при изменении состояния приложения на неактивное."
+    },
+    {
+      "question": "Какой метод вызывается при изменении состояния приложения на завершенное?",
+      "correct_answer": "didChangeAppLifecycleState",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "didChangeAppLifecycleState вызывается при изменении состояния приложения на завершенное."
+    },
+    {
+      "question": "Какой метод вызывается при изменении состояния приложения на свернутое?",
+      "correct_answer": "didChangeAppLifecycleState",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "didChangeAppLifecycleState вызывается при изменении состояния приложения на свернутое."
+    },
+    {
+      "question": "Какой метод вызывается при изменении состояния приложения на развернутое?",
+      "correct_answer": "didChangeAppLifecycleState",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "didChangeAppLifecycleState вызывается при изменении состояния приложения на развернутое."
+    },
+    {
+      "question": "Какой метод вызывается при изменении состояния приложения на остановленное?",
+      "correct_answer": "didChangeAppLifecycleState",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "didChangeAppLifecycleState вызывается при изменении состояния приложения на остановленное."
+    },
+    {
+      "question": "Какой метод вызывается при изменении состояния приложения на запущенное?",
+      "correct_answer": "didChangeAppLifecycleState",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "didChangeAppLifecycleState вызывается при изменении состояния приложения на запущенное."
+    },
+    {
+      "question": "Какой метод вызывается при изменении состояния приложения на завершенное?",
+      "correct_answer": "didChangeAppLifecycleState",
+      "incorrect_answers": [
+        "initState",
+        "build",
+        "dispose"
+      ],
+      "explanation": "didChangeAppLifecycleState вызывается при изменении состояния приложения на завершенное."
+    }
+  ]

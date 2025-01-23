@@ -1,0 +1,102 @@
+[
+    {
+      "question": "What is the primary purpose of a class in object-oriented programming?",
+      "correct_answer": "To define a blueprint for creating objects with attributes and methods.",
+      "incorrect_answers": [
+        "To execute all code in a single file.",
+        "To group unrelated functions together.",
+        "To handle asynchronous programming."
+      ],
+      "explanation": "In OOP, a class is a blueprint for objects. It defines attributes (fields) and methods that the objects created from the class can use."
+    },
+    {
+      "question": "What is the difference between a constructor and a factory constructor in Dart?",
+      "correct_answer": "A factory constructor can return an existing instance, while a regular constructor always creates a new instance.",
+      "incorrect_answers": [
+        "A factory constructor is used for nullable types.",
+        "A factory constructor cannot have parameters.",
+        "A regular constructor is asynchronous, but a factory constructor is synchronous."
+      ],
+      "explanation": "Factory constructors in Dart allow custom instantiation logic, including returning existing instances, whereas regular constructors always create a new instance."
+    },
+    {
+      "question": "What is the purpose of inheritance in OOP?",
+      "correct_answer": "To allow a class to reuse the functionality of another class.",
+      "incorrect_answers": [
+        "To group unrelated functions together.",
+        "To execute code asynchronously.",
+        "To restrict access to class members."
+      ],
+      "explanation": "Inheritance enables one class (child class) to reuse and extend the functionality of another class (parent class), promoting code reuse and modularity."
+    },
+    {
+      "question": "What keyword is used in Dart to inherit from another class?",
+      "correct_answer": "`extends`",
+      "incorrect_answers": [
+        "`implements`",
+        "`with`",
+        "`inherits`"
+      ],
+      "explanation": "The `extends` keyword is used to create a subclass in Dart, inheriting from a parent class."
+    },
+    {
+      "question": "What is a mixin in Dart?",
+      "correct_answer": "A way to reuse a class's functionality in multiple classes without inheritance.",
+      "incorrect_answers": [
+        "A class that can only be used as a base class.",
+        "A type of interface used for asynchronous programming.",
+        "A special kind of constructor in Dart."
+      ],
+      "explanation": "Mixins allow a class to reuse functionality from multiple classes without forming a traditional inheritance hierarchy. Mixins are applied using the `with` keyword."
+    },
+    {
+      "question": "Which of the following is the correct syntax for a named constructor in Dart?",
+      "correct_answer": "```dart\nclass MyClass {\n  MyClass.named();\n}\n```",
+      "incorrect_answers": [
+        "```dart\nclass MyClass {\n  MyClass.named() {}\n}\n```",
+        "```dart\nclass MyClass {\n  named MyClass() {}\n}\n```",
+        "```dart\nclass MyClass {\n  named.constructor();\n}\n```"
+      ],
+      "explanation": "A named constructor in Dart is defined using the syntax `ClassName.constructorName()`, allowing custom initialization logic."
+    },
+    {
+      "question": "What is the difference between `implements` and `extends` in Dart?",
+      "correct_answer": "`implements` forces the class to define all methods and properties of the interface, while `extends` allows reusing and overriding parent class methods.",
+      "incorrect_answers": [
+        "`implements` is used for inheritance, while `extends` is for interfaces.",
+        "`implements` automatically implements methods, while `extends` does not.",
+        "`extends` only works with abstract classes, while `implements` works with concrete classes."
+      ],
+      "explanation": "The `implements` keyword in Dart forces the implementing class to define all methods and properties from the interface, while `extends` is used for inheritance and allows reusing or overriding functionality."
+    },
+    {
+      "question": "What does the `super` keyword in Dart do?",
+      "correct_answer": "It allows access to the parent class's methods and properties.",
+      "incorrect_answers": [
+        "It defines a mixin to be used in the class.",
+        "It creates a new instance of the parent class.",
+        "It initializes the class with default values."
+      ],
+      "explanation": "The `super` keyword is used to call methods or access properties of the parent class from the child class."
+    },
+    {
+      "question": "What is the difference between a default constructor and a named constructor in Dart?",
+      "correct_answer": "A default constructor is unnamed, while a named constructor has a custom name for specific initialization.",
+      "incorrect_answers": [
+        "A default constructor must take no arguments, while a named constructor can have parameters.",
+        "A named constructor is asynchronous, while a default constructor is synchronous.",
+        "A default constructor can only initialize variables, while a named constructor can perform calculations."
+      ],
+      "explanation": "A default constructor in Dart is unnamed and automatically created if no constructor is defined. A named constructor is explicitly defined with a custom name for specific initialization logic."
+    },
+    {
+      "question": "How can you apply multiple mixins to a class in Dart?",
+      "correct_answer": "By separating mixin names with commas using the `with` keyword.",
+      "incorrect_answers": [
+        "By chaining mixins using the `implements` keyword.",
+        "By using the `extends` keyword with multiple mixins.",
+        "By applying each mixin in a separate class declaration."
+      ],
+      "explanation": "In Dart, multiple mixins can be applied to a class by using the `with` keyword followed by a comma-separated list of mixins."
+    }
+  ]

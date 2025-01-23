@@ -1,0 +1,102 @@
+[
+    {
+      "question": "What is the purpose of extensions in Dart?",
+      "correct_answer": "To add functionality to existing classes without modifying them.",
+      "incorrect_answers": [
+        "To create subclasses with additional methods.",
+        "To override methods in parent classes.",
+        "To restrict access to certain methods."
+      ],
+      "explanation": "Extensions in Dart allow developers to add new methods or properties to existing classes without altering their original definition."
+    },
+    {
+      "question": "Which syntax correctly defines an extension in Dart?",
+      "correct_answer": "```dart\nextension StringExtension on String {\n  bool get isPalindrome => this == this.split('').reversed.join();\n}\n```",
+      "incorrect_answers": [
+        "```dart\nStringExtension on String {\n  bool get isPalindrome => this == this.split('').reversed.join();\n}\n```",
+        "```dart\nclass StringExtension {\n  bool isPalindrome(String value) => value == value.split('').reversed.join();\n}\n```",
+        "```dart\nStringExtension extends String {\n  bool get isPalindrome => this == this.split('').reversed.join();\n}\n```"
+      ],
+      "explanation": "The correct syntax for an extension in Dart uses the `extension` keyword, followed by the extension name and the `on` keyword with the class name it applies to."
+    },
+    {
+      "question": "What are annotations used for in Dart?",
+      "correct_answer": "To add metadata to code elements like classes, methods, and fields.",
+      "incorrect_answers": [
+        "To define new methods for existing classes.",
+        "To manage asynchronous operations.",
+        "To enforce compile-time null safety."
+      ],
+      "explanation": "Annotations in Dart are metadata attached to code elements, such as `@override`, `@deprecated`, or custom annotations created using a `const` constructor."
+    },
+    {
+      "question": "What is FFI (Foreign Function Interface) used for in Dart?",
+      "correct_answer": "To call native C functions from Dart code.",
+      "incorrect_answers": [
+        "To create multi-threaded applications.",
+        "To manage platform-specific assets in Flutter.",
+        "To optimize Dart code for faster execution."
+      ],
+      "explanation": "FFI allows Dart code to call native C functions directly, enabling interoperability with platform-specific libraries and APIs."
+    },
+    {
+      "question": "What does the `covariant` keyword do in Dart?",
+      "correct_answer": "It allows parameters in a subclass to have a more specific type than in the parent class.",
+      "incorrect_answers": [
+        "It enforces type checks at runtime.",
+        "It restricts method overriding in subclasses.",
+        "It creates type-safe generic classes."
+      ],
+      "explanation": "`covariant` allows a parameter type to be overridden with a more specific type in subclasses, but the compiler enforces type checks."
+    },
+    {
+      "question": "What is the role of `WidgetsFlutterBinding` in Flutter?",
+      "correct_answer": "It acts as a bridge between the Flutter framework and the Flutter engine.",
+      "incorrect_answers": [
+        "It handles all rendering tasks in Flutter.",
+        "It provides a way to manage state across widgets.",
+        "It is used to write custom platform-specific plugins."
+      ],
+      "explanation": "`WidgetsFlutterBinding` is the glue between the Flutter framework and the engine, managing tasks like scheduling and rendering."
+    },
+    {
+      "question": "Which binding in Flutter is responsible for managing gesture detection?",
+      "correct_answer": "`GestureBinding`",
+      "incorrect_answers": [
+        "`WidgetsBinding`",
+        "`SchedulerBinding`",
+        "`SemanticsBinding`"
+      ],
+      "explanation": "`GestureBinding` handles gesture detection and dispatches gesture events to the appropriate widgets."
+    },
+    {
+      "question": "What is a platform channel in Flutter?",
+      "correct_answer": "A communication mechanism between Dart code and platform-specific native code.",
+      "incorrect_answers": [
+        "A channel for debugging Flutter applications.",
+        "A networking API for HTTP requests.",
+        "A tool for managing application state."
+      ],
+      "explanation": "Platform channels enable communication between Dart code in Flutter and native code on Android or iOS using message passing."
+    },
+    {
+      "question": "What is the purpose of the `scheduleAttachRootWidget` method in `WidgetsFlutterBinding`?",
+      "correct_answer": "To attach a widget to the render tree as the root element.",
+      "incorrect_answers": [
+        "To schedule a callback for frame rendering.",
+        "To register a platform channel for communication.",
+        "To initialize Flutter plugins."
+      ],
+      "explanation": "`scheduleAttachRootWidget` attaches the root widget to the render tree, ensuring it becomes the entry point for rendering in Flutter."
+    },
+    {
+      "question": "What codec should you use for transmitting structured data like maps and lists through platform channels in Flutter?",
+      "correct_answer": "`StandardMessageCodec`",
+      "incorrect_answers": [
+        "`BinaryCodec`",
+        "`JSONMessageCodec`",
+        "`StandardMethodCodec`"
+      ],
+      "explanation": "`StandardMessageCodec` supports structured data like maps and lists, making it ideal for platform channel communication in Flutter."
+    }
+  ]
