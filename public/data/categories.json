@@ -1,19 +1,15 @@
 {
   "categories": [
-    {
-      "key": "programming",
-      "text": "Programming",
-      "value": "programming",
-      "subcategories": [
-        { "key": "code",
-        "text": "code",
-        "value": "code"
-      },
-      { "key": "design_patterns",
-      "text": "Design patterns",
-      "value": "design_patterns"
-    },
-    
+        {
+          "key": "code",
+          "text": "Code",
+          "value": "code"
+        },
+        {
+          "key": "design_patterns",
+          "text": "Design Patterns",
+          "value": "design_patterns"
+        },
         {
           "key": "dart_flutter",
           "text": "Dart & Flutter",
@@ -22,27 +18,124 @@
             {
               "key": "dart",
               "text": "Dart Programming",
-              "value": "dart"
+              "value": "dart",
+              "subcategories": [
+                {
+                  "key": "types",
+                  "text": "Types and Generics",
+                  "value": "dart/types"
+                },
+                {
+                  "key": "keywords",
+                  "text": "keywords",
+                  "value": "dart/keywords"
+                },
+                {
+                  "key": "error_handling",
+                  "text": "Error Handling",
+                  "value": "dart/error_handling"
+                },
+                {
+                  "key": "async_programming",
+                  "text": "Async Programming",
+                  "value": "dart/async_programming"
+                },
+                {
+                  "key": "data_structures",
+                  "text": "Data Structures",
+                  "value": "dart/data_structures"
+                },
+                {
+                  "key": "null_safety",
+                  "text": "Null Safety",
+                  "value": "dart/null_safety"
+                },
+                {
+                  "key": "oop",
+                  "text": "Object-Oriented Programming",
+                  "value": "dart/oop"
+                },
+                {
+                  "key": "advanced_features",
+                  "text": "Advanced Features",
+                  "value": "dart/advanced_features"
+                }
+              ]
             },
             {
               "key": "flutter",
               "text": "Flutter Framework",
-              "value": "flutter"
+              "value": "flutter",
+              "subcategories": [
+                {
+                  "key": "widgets",
+                  "text": "Widgets",
+                  "value": "flutter/widgets"
+                },
+                {
+                  "key": "state_management",
+                  "text": "State Management",
+                  "value": "flutter/state_management"
+                },
+                {
+                  "key": "animations",
+                  "text": "Animations",
+                  "value": "flutter/animations"
+                },
+                {
+                  "key": "architecture",
+                  "text": "Architecture",
+                  "value": "flutter/architecture"
+                },
+                {
+                  "key": "testing",
+                  "text": "Testing",
+                  "value": "flutter/testing"
+                },
+                {
+                  "key": "performance",
+                  "text": "Performance",
+                  "value": "flutter/performance"
+                },
+                {
+                  "key": "internals",
+                  "text": "Flutter Internals",
+                  "value": "flutter/internals"
+                },
+                {
+                  "key": "platform_channels",
+                  "text": "Platform Channels",
+                  "value": "flutter/platform_channels"
+                },
+                {
+                  "key": "lifecycle",
+                  "text": "Widget Lifecycle",
+                  "value": "flutter/lifecycle"
+                },
+                {
+                  "key": "layout",
+                  "text": "Layout and Constraints",
+                  "value": "flutter/layout"
+                },
+                {
+                  "key": "navigation",
+                  "text": "Navigation",
+                  "value": "flutter/navigation"
+                }
+              ]
             }
           ]
-        }
-      ]
-    },
+        },
     {
-      "key": "Geography",
+      "key": "geography",
       "text": "Geography",
       "value": "geography",
       "subcategories": [
-          {
-              "key": "capitals",
-              "text": "World's capitals",
-              "value": "geo/capitals"
-          }
+        {
+          "key": "capitals",
+          "text": "World's Capitals",
+          "value": "geo/capitals"
+        }
       ]
     },
     {
@@ -63,4 +156,4 @@
       ]
     }
   ]
-} 
+}

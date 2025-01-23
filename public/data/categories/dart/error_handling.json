@@ -1,0 +1,102 @@
+[
+    {
+      "question": "What is the difference between an `Exception` and an `Error` in Dart?",
+      "correct_answer": "`Exception` is used for recoverable issues, while `Error` indicates critical problems that should not be caught.",
+      "incorrect_answers": [
+        "`Exception` is used for syntax issues, and `Error` is used for runtime issues.",
+        "`Error` and `Exception` are interchangeable in Dart.",
+        "`Exception` is only for I/O operations, and `Error` is for other types of problems."
+      ],
+      "explanation": "`Exception` represents conditions that can be handled and recovered, such as `FormatException` or `IOException`. On the other hand, `Error` represents critical issues like `OutOfMemoryError` or `StackOverflowError` that usually indicate problems in the system or program."
+    },
+    {
+      "question": "Which of the following is a type of `Exception` in Dart?",
+      "correct_answer": "FormatException",
+      "incorrect_answers": [
+        "StackOverflowError",
+        "OutOfMemoryError",
+        "UnsupportedError"
+      ],
+      "explanation": "Examples of `Exception` include `FormatException`, `IOException`, `DeferredLoadException`, and more. Errors like `StackOverflowError` are not recoverable and belong to the `Error` class."
+    },
+    {
+      "question": "Which of the following is a type of `Error` in Dart?",
+      "correct_answer": "StackOverflowError",
+      "incorrect_answers": [
+        "HttpException",
+        "FormatException",
+        "TimeoutException"
+      ],
+      "explanation": "`Error` types in Dart include `StackOverflowError`, `OutOfMemoryError`, `AssertionError`, and more. These represent critical issues in the program or system."
+    },
+    {
+      "question": "What will happen if an `IntegerDivisionByZeroException` is thrown in Dart?",
+      "correct_answer": "It can be caught and handled in a `catch` block.",
+      "incorrect_answers": [
+        "The program will terminate without any recovery.",
+        "Dart will convert it into an `Error` and rethrow.",
+        "The exception will be ignored."
+      ],
+      "explanation": "`IntegerDivisionByZeroException` is part of the `Exception` class and can be caught and handled, unlike critical issues that belong to the `Error` class."
+    },
+    {
+      "question": "What is the purpose of `Error` types in Dart?",
+      "correct_answer": "To represent critical issues that indicate serious problems in the program or system.",
+      "incorrect_answers": [
+        "To handle recoverable issues like invalid input.",
+        "To log runtime issues in a separate thread.",
+        "To allow developers to define their own exception hierarchy."
+      ],
+      "explanation": "`Error` types, such as `OutOfMemoryError`, `StackOverflowError`, and `StateError`, represent non-recoverable critical issues in the system."
+    },
+    {
+      "question": "Match the following types to their respective categories:\n1. `FormatException`\n2. `OutOfMemoryError`\n3. `HttpException`\n4. `StackOverflowError`",
+      "correct_answer": "`1: Exception, 2: Error, 3: Exception, 4: Error`",
+      "incorrect_answers": [
+        "`1: Error, 2: Exception, 3: Exception, 4: Exception`",
+        "`1: Exception, 2: Exception, 3: Error, 4: Error`",
+        "`1: Error, 2: Error, 3: Exception, 4: Exception`"
+      ],
+      "explanation": "`FormatException` and `HttpException` are examples of `Exception`, while `OutOfMemoryError` and `StackOverflowError` are examples of `Error` in Dart."
+    },
+    {
+      "question": "Which `Exception` type is thrown when a file operation fails?",
+      "correct_answer": "FileSystemException",
+      "incorrect_answers": [
+        "PathNotFoundException",
+        "IOException",
+        "UnsupportedError"
+      ],
+      "explanation": "`FileSystemException` is thrown when a file-related operation fails. It is a specific subclass of `IOException`."
+    },
+    {
+      "question": "Which `Error` type is thrown when a function receives an argument of the wrong type?",
+      "correct_answer": "ArgumentError",
+      "incorrect_answers": [
+        "TypeError",
+        "RangeError",
+        "StateError"
+      ],
+      "explanation": "`ArgumentError` is thrown when a function receives an argument that does not meet the expected type or value."
+    },
+    {
+      "question": "What does the following Dart code output?\n```dart\nvoid main() {\n  try {\n    throw AssertionError('Assertion failed.');\n  } catch (e) {\n    print(e);\n  }\n}\n```",
+      "correct_answer": "Assertion failed.",
+      "incorrect_answers": [
+        "Unhandled exception: AssertionError",
+        "No output, the program crashes.",
+        "The code throws a compilation error."
+      ],
+      "explanation": "`AssertionError` is an `Error` in Dart and can still be caught in a `catch` block, allowing the program to handle it gracefully."
+    },
+    {
+      "question": "Which of the following exceptions is marked as deprecated in Dart?",
+      "correct_answer": "IntegerDivisionByZeroException",
+      "incorrect_answers": [
+        "NullRejectionException",
+        "SignalException",
+        "DeferredLoadException"
+      ],
+      "explanation": "`IntegerDivisionByZeroException` is marked as deprecated in Dart. Developers are encouraged to handle such cases differently."
+    }
+  ]

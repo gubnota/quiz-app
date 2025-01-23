@@ -1,0 +1,102 @@
+[
+    {
+      "question": "What are the three states of a `Future` in Dart?",
+      "correct_answer": "Uncompleted, Completed with Result, Completed with Error",
+      "incorrect_answers": [
+        "Started, Paused, Finished",
+        "Created, Running, Completed",
+        "Pending, Successful, Failed"
+      ],
+      "explanation": "A `Future` can be in three states: Uncompleted (operation not finished), Completed with Result (successful operation), or Completed with Error (operation failed)."
+    },
+    {
+      "question": "What does the `Future.delayed` constructor do?",
+      "correct_answer": "It schedules a task to run after a specified delay.",
+      "incorrect_answers": [
+        "It blocks the main thread for the duration of the delay.",
+        "It creates a synchronous pause in execution.",
+        "It immediately executes the task and ignores the delay."
+      ],
+      "explanation": "`Future.delayed` schedules the computation to run after the specified delay, without blocking the main thread."
+    },
+    {
+      "question": "What is the purpose of the `await` keyword in Dart?",
+      "correct_answer": "It pauses execution until the `Future` completes and returns its value.",
+      "incorrect_answers": [
+        "It converts a `Future` into a synchronous operation.",
+        "It runs the code in parallel threads.",
+        "It forces the `Future` to complete immediately."
+      ],
+      "explanation": "`await` pauses the execution of the function until the `Future` completes, allowing the result to be used as if it were synchronous."
+    },
+    {
+      "question": "What is the priority of the MicroTask queue in the Dart Event Loop?",
+      "correct_answer": "Higher priority than the Event queue.",
+      "incorrect_answers": [
+        "Lower priority than the Event queue.",
+        "Same priority as the Event queue.",
+        "MicroTasks are not part of the Event Loop."
+      ],
+      "explanation": "The MicroTask queue has higher priority than the Event queue, meaning its tasks are executed first."
+    },
+    {
+      "question": "Which of the following statements about `Completer` is correct?",
+      "correct_answer": "`Completer` is used to manually complete a `Future`.",
+      "incorrect_answers": [
+        "`Completer` creates a new isolate for parallel execution.",
+        "`Completer` is a type of generator.",
+        "`Completer` is used to schedule tasks in the MicroTask queue."
+      ],
+      "explanation": "`Completer` provides a way to manually complete a `Future` with a value or an error."
+    },
+    {
+      "question": "What is the difference between `Single subscription` and `Broadcast` streams in Dart?",
+      "correct_answer": "`Single subscription` allows only one listener, while `Broadcast` allows multiple listeners.",
+      "incorrect_answers": [
+        "`Broadcast` streams are synchronous, while `Single subscription` streams are asynchronous.",
+        "`Single subscription` streams keep events for late listeners, `Broadcast` streams do not.",
+        "`Broadcast` streams are used for I/O, while `Single subscription` streams are used for UI."
+      ],
+      "explanation": "`Single subscription` streams are meant for one-time listeners, while `Broadcast` streams allow multiple listeners and do not retain events for new listeners."
+    },
+    {
+      "question": "How does Dart achieve concurrency if it is single-threaded?",
+      "correct_answer": "Dart uses isolates to run code in parallel.",
+      "incorrect_answers": [
+        "Dart uses threads to run concurrent code.",
+        "Dart uses async/await for multi-threading.",
+        "Dart does not support concurrency."
+      ],
+      "explanation": "Dart is single-threaded but uses isolates for parallel execution. Isolates do not share memory and communicate using messages."
+    },
+    {
+      "question": "What is the purpose of the `compute` function in Dart?",
+      "correct_answer": "It creates a new isolate to execute heavy computations.",
+      "incorrect_answers": [
+        "It schedules a task in the Event queue.",
+        "It executes a task immediately on the main thread.",
+        "It is used for handling MicroTasks."
+      ],
+      "explanation": "`compute` is a helper function that offloads heavy tasks to a separate isolate, preventing UI blocking."
+    },
+    {
+      "question": "Which of the following issues can occur in Dart's multithreading with isolates?",
+      "correct_answer": "Deadlock, Race Conditions, Lock Contention, Live Lock",
+      "incorrect_answers": [
+        "Memory Sharing, Stack Overflow, I/O Blocking, Timeouts",
+        "Null Safety, Infinite Loops, Thread Starvation, Heap Overflow",
+        "Garbage Collection, Cache Miss, Pointer Dereferencing, Overhead"
+      ],
+      "explanation": "Common multithreading issues include Deadlock (waiting indefinitely for resources), Race Conditions (unpredictable behavior due to improper synchronization), Lock Contention (threads waiting for a locked resource), and Live Lock (threads keep releasing and reacquiring resources without making progress)."
+    },
+    {
+      "question": "What is the purpose of Zones in Dart?",
+      "correct_answer": "Zones allow you to intercept asynchronous events and errors within a specific context.",
+      "incorrect_answers": [
+        "Zones define the visibility of variables.",
+        "Zones provide an isolated memory space for threads.",
+        "Zones are used for network requests."
+      ],
+      "explanation": "Zones are execution contexts in Dart that allow error handling, custom logging, and overriding default behaviors such as `print` or scheduling tasks."
+    }
+  ]

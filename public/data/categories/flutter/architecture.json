@@ -1,0 +1,202 @@
+[
+    {
+      "question": "Какова роль **Data Layer** в Clean Architecture на примере Flutter? Приведите пример кода для получения данных из API.\n```dart\nclass UserRepository {\n  final UserApiClient apiClient;\n\n  UserRepository(this.apiClient);\n\n  Future<User> fetchUser(int userId) async {\n    return await apiClient.fetchUser(userId);\n  }\n}\n```",
+      "correct_answer": "Data Layer отвечает за получение данных из внешних источников, таких как API или база данных.",
+      "incorrect_answers": [
+        "Data Layer отвечает за логику приложения.",
+        "Data Layer занимается только отображением данных на экране.",
+        "Data Layer не взаимодействует с внешними источниками."
+      ],
+      "explanation": "Data Layer — это слой, который взаимодействует с внешними источниками данных, такими как API, базы данных или файловая система. Он предоставляет данные Domain Layer."
+    },
+    {
+      "question": "Какова роль **Domain Layer** в Clean Architecture? Приведите пример кода с использованием UseCase.\n```dart\nclass GetUserUseCase {\n  final UserRepository userRepository;\n\n  GetUserUseCase(this.userRepository);\n\n  Future<User> execute(int userId) async {\n    return await userRepository.fetchUser(userId);\n  }\n}\n```",
+      "correct_answer": "Domain Layer содержит бизнес-логику приложения и UseCase, которые инкапсулируют конкретные действия.",
+      "incorrect_answers": [
+        "Domain Layer отвечает за отображение данных на экране.",
+        "Domain Layer взаимодействует напрямую с API.",
+        "Domain Layer не содержит логики, только данные."
+      ],
+      "explanation": "Domain Layer — это слой, который содержит бизнес-логику и UseCase. Он не зависит от других слоев и определяет, как данные должны быть обработаны."
+    },
+    {
+      "question": "Какова роль **Presentation Layer** в Clean Architecture? Приведите пример кода с использованием StateManagement (например, Provider).\n```dart\nclass UserProvider with ChangeNotifier {\n  User? _user;\n  final GetUserUseCase getUserUseCase;\n\n  UserProvider(this.getUserUseCase);\n\n  User? get user => _user;\n\n  Future<void> fetchUser(int userId) async {\n    _user = await getUserUseCase.execute(userId);\n    notifyListeners();\n  }\n}\n```",
+      "correct_answer": "Presentation Layer отвечает за отображение данных и управление состоянием UI.",
+      "incorrect_answers": [
+        "Presentation Layer содержит бизнес-логику приложения.",
+        "Presentation Layer взаимодействует напрямую с API.",
+        "Presentation Layer не зависит от других слоев."
+      ],
+      "explanation": "Presentation Layer — это слой, который управляет отображением данных на экране и взаимодействует с Domain Layer для получения данных."
+    },
+    {
+      "question": "Какой слой в Clean Architecture отвечает за взаимодействие с API?\n```dart\nclass UserApiClient {\n  Future<User> fetchUser(int userId) async {\n    // Симуляция запроса к API\n    await Future.delayed(Duration(seconds: 1));\n    return User(id: userId, name: 'John Doe');\n  }\n}\n```",
+      "correct_answer": "Data Layer",
+      "incorrect_answers": [
+        "Domain Layer",
+        "Presentation Layer",
+        "Network Layer"
+      ],
+      "explanation": "Data Layer отвечает за взаимодействие с внешними источниками данных, такими как API."
+    },
+    {
+      "question": "Какой слой в Clean Architecture содержит UseCase?\n```dart\nclass GetUserUseCase {\n  final UserRepository userRepository;\n\n  GetUserUseCase(this.userRepository);\n\n  Future<User> execute(int userId) async {\n    return await userRepository.fetchUser(userId);\n  }\n}\n```",
+      "correct_answer": "Domain Layer",
+      "incorrect_answers": [
+        "Data Layer",
+        "Presentation Layer",
+        "Business Layer"
+      ],
+      "explanation": "Domain Layer содержит UseCase, которые инкапсулируют бизнес-логику."
+    },
+    {
+      "question": "Какой слой в Clean Architecture управляет состоянием UI?\n```dart\nclass UserProvider with ChangeNotifier {\n  User? _user;\n  final GetUserUseCase getUserUseCase;\n\n  UserProvider(this.getUserUseCase);\n\n  User? get user => _user;\n\n  Future<void> fetchUser(int userId) async {\n    _user = await getUserUseCase.execute(userId);\n    notifyListeners();\n  }\n}\n```",
+      "correct_answer": "Presentation Layer",
+      "incorrect_answers": [
+        "Data Layer",
+        "Domain Layer",
+        "UI Layer"
+      ],
+      "explanation": "Presentation Layer управляет состоянием UI и взаимодействует с Domain Layer для получения данных."
+    },
+    {
+      "question": "Какой слой в Clean Architecture не зависит от других слоев?",
+      "correct_answer": "Domain Layer",
+      "incorrect_answers": [
+        "Data Layer",
+        "Presentation Layer",
+        "Network Layer"
+      ],
+      "explanation": "Domain Layer не зависит от других слоев, что делает его центральным для бизнес-логики."
+    },
+    {
+      "question": "Какой слой в Clean Architecture зависит от Domain Layer?",
+      "correct_answer": "Presentation Layer",
+      "incorrect_answers": [
+        "Data Layer",
+        "Network Layer",
+        "UI Layer"
+      ],
+      "explanation": "Presentation Layer зависит от Domain Layer для получения данных и выполнения бизнес-логики."
+    },
+    {
+      "question": "Какой слой в Clean Architecture зависит от Data Layer?",
+      "correct_answer": "Domain Layer",
+      "incorrect_answers": [
+        "Presentation Layer",
+        "Network Layer",
+        "UI Layer"
+      ],
+      "explanation": "Domain Layer зависит от Data Layer для получения данных из внешних источников."
+    },
+    {
+      "question": "Какой слой в Clean Architecture отвечает за хранение данных в локальной базе данных?",
+      "correct_answer": "Data Layer",
+      "incorrect_answers": [
+        "Domain Layer",
+        "Presentation Layer",
+        "Storage Layer"
+      ],
+      "explanation": "Data Layer отвечает за хранение данных в локальной базе данных или других внешних источниках."
+    },
+    {
+      "question": "Какой слой в Clean Architecture отвечает за обработку ошибок при запросах к API?",
+      "correct_answer": "Data Layer",
+      "incorrect_answers": [
+        "Domain Layer",
+        "Presentation Layer",
+        "Error Layer"
+      ],
+      "explanation": "Data Layer обрабатывает ошибки, возникающие при взаимодействии с внешними источниками данных."
+    },
+    {
+      "question": "Какой слой в Clean Architecture отвечает за валидацию данных?",
+      "correct_answer": "Domain Layer",
+      "incorrect_answers": [
+        "Data Layer",
+        "Presentation Layer",
+        "Validation Layer"
+      ],
+      "explanation": "Domain Layer отвечает за валидацию данных в соответствии с бизнес-правилами."
+    },
+    {
+      "question": "Какой слой в Clean Architecture отвечает за навигацию между экранами?",
+      "correct_answer": "Presentation Layer",
+      "incorrect_answers": [
+        "Data Layer",
+        "Domain Layer",
+        "Navigation Layer"
+      ],
+      "explanation": "Presentation Layer управляет навигацией между экранами и отображением данных."
+    },
+    {
+      "question": "Какой слой в Clean Architecture отвечает за кэширование данных?",
+      "correct_answer": "Data Layer",
+      "incorrect_answers": [
+        "Domain Layer",
+        "Presentation Layer",
+        "Cache Layer"
+      ],
+      "explanation": "Data Layer может включать кэширование данных для повышения производительности."
+    },
+    {
+      "question": "Какой слой в Clean Architecture отвечает за преобразование данных из API в модели приложения?",
+      "correct_answer": "Data Layer",
+      "incorrect_answers": [
+        "Domain Layer",
+        "Presentation Layer",
+        "Mapping Layer"
+      ],
+      "explanation": "Data Layer преобразует данные из API в модели, которые используются в приложении."
+    },
+    {
+      "question": "Какой слой в Clean Architecture отвечает за управление зависимостями?",
+      "correct_answer": "Все слои могут управлять своими зависимостями, но Dependency Injection часто используется на уровне Presentation Layer.",
+      "incorrect_answers": [
+        "Только Data Layer",
+        "Только Domain Layer",
+        "Только Presentation Layer"
+      ],
+      "explanation": "Управление зависимостями может быть реализовано на любом уровне, но чаще всего используется в Presentation Layer."
+    },
+    {
+      "question": "Какой слой в Clean Architecture отвечает за тестирование бизнес-логики?",
+      "correct_answer": "Domain Layer",
+      "incorrect_answers": [
+        "Data Layer",
+        "Presentation Layer",
+        "Testing Layer"
+      ],
+      "explanation": "Domain Layer содержит бизнес-логику, которая может быть протестирована независимо от других слоев."
+    },
+    {
+      "question": "Какой слой в Clean Architecture отвечает за тестирование UI?",
+      "correct_answer": "Presentation Layer",
+      "incorrect_answers": [
+        "Data Layer",
+        "Domain Layer",
+        "Testing Layer"
+      ],
+      "explanation": "Presentation Layer управляет UI, который может быть протестирован с помощью виджет-тестов."
+    },
+    {
+      "question": "Какой слой в Clean Architecture отвечает за тестирование запросов к API?",
+      "correct_answer": "Data Layer",
+      "incorrect_answers": [
+        "Domain Layer",
+        "Presentation Layer",
+        "Testing Layer"
+      ],
+      "explanation": "Data Layer взаимодействует с API, и его можно тестировать с помощью интеграционных тестов."
+    },
+    {
+      "question": "Какой слой в Clean Architecture отвечает за обработку событий пользователя?",
+      "correct_answer": "Presentation Layer",
+      "incorrect_answers": [
+        "Data Layer",
+        "Domain Layer",
+        "Event Layer"
+      ],
+      "explanation": "Presentation Layer обрабатывает события пользователя, такие как нажатия кнопок, и передает их в Domain Layer."
+    }
+  ]

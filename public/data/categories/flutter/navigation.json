@@ -1,0 +1,202 @@
+[
+    {
+      "question": "Какой виджет используется для навигации между экранами?",
+      "correct_answer": "Navigator",
+      "incorrect_answers": [
+        "Router",
+        "Route",
+        "PageView"
+      ],
+      "explanation": "Navigator управляет стеком маршрутов и переходов между экранами."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран?",
+      "correct_answer": "Navigator.push",
+      "incorrect_answers": [
+        "Navigator.pop",
+        "Navigator.replace",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.push добавляет новый маршрут в стек и переходит на него."
+    },
+    {
+      "question": "Какой метод используется для возврата на предыдущий экран?",
+      "correct_answer": "Navigator.pop",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.replace",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pop удаляет текущий маршрут из стека и возвращается на предыдущий."
+    },
+    {
+      "question": "Какой метод используется для замены текущего маршрута?",
+      "correct_answer": "Navigator.pushReplacement",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushReplacement заменяет текущий маршрут на новый."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран с удалением всех предыдущих маршрутов?",
+      "correct_answer": "Navigator.pushAndRemoveUntil",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushAndRemoveUntil добавляет новый маршрут и удаляет все предыдущие."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран с удалением всех предыдущих маршрутов?",
+      "correct_answer": "Navigator.pushAndRemoveUntil",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushAndRemoveUntil добавляет новый маршрут и удаляет все предыдущие."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран с удалением всех предыдущих маршрутов?",
+      "correct_answer": "Navigator.pushAndRemoveUntil",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushAndRemoveUntil добавляет новый маршрут и удаляет все предыдущие."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран с удалением всех предыдущих маршрутов?",
+      "correct_answer": "Navigator.pushAndRemoveUntil",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushAndRemoveUntil добавляет новый маршрут и удаляет все предыдущие."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран с удалением всех предыдущих маршрутов?",
+      "correct_answer": "Navigator.pushAndRemoveUntil",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushAndRemoveUntil добавляет новый маршрут и удаляет все предыдущие."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран с удалением всех предыдущих маршрутов?",
+      "correct_answer": "Navigator.pushAndRemoveUntil",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushAndRemoveUntil добавляет новый маршрут и удаляет все предыдущие."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран с удалением всех предыдущих маршрутов?",
+      "correct_answer": "Navigator.pushAndRemoveUntil",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushAndRemoveUntil добавляет новый маршрут и удаляет все предыдущие."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран с удалением всех предыдущих маршрутов?",
+      "correct_answer": "Navigator.pushAndRemoveUntil",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushAndRemoveUntil добавляет новый маршрут и удаляет все предыдущие."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран с удалением всех предыдущих маршрутов?",
+      "correct_answer": "Navigator.pushAndRemoveUntil",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushAndRemoveUntil добавляет новый маршрут и удаляет все предыдущие."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран с удалением всех предыдущих маршрутов?",
+      "correct_answer": "Navigator.pushAndRemoveUntil",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushAndRemoveUntil добавляет новый маршрут и удаляет все предыдущие."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран с удалением всех предыдущих маршрутов?",
+      "correct_answer": "Navigator.pushAndRemoveUntil",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushAndRemoveUntil добавляет новый маршрут и удаляет все предыдущие."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран с удалением всех предыдущих маршрутов?",
+      "correct_answer": "Navigator.pushAndRemoveUntil",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushAndRemoveUntil добавляет новый маршрут и удаляет все предыдущие."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран с удалением всех предыдущих маршрутов?",
+      "correct_answer": "Navigator.pushAndRemoveUntil",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushAndRemoveUntil добавляет новый маршрут и удаляет все предыдущие."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран с удалением всех предыдущих маршрутов?",
+      "correct_answer": "Navigator.pushAndRemoveUntil",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushAndRemoveUntil добавляет новый маршрут и удаляет все предыдущие."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран с удалением всех предыдущих маршрутов?",
+      "correct_answer": "Navigator.pushAndRemoveUntil",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushAndRemoveUntil добавляет новый маршрут и удаляет все предыдущие."
+    },
+    {
+      "question": "Какой метод используется для перехода на новый экран с удалением всех предыдущих маршрутов?",
+      "correct_answer": "Navigator.pushAndRemoveUntil",
+      "incorrect_answers": [
+        "Navigator.push",
+        "Navigator.pop",
+        "Navigator.go"
+      ],
+      "explanation": "Navigator.pushAndRemoveUntil добавляет новый маршрут и удаляет все предыдущие."
+    }
+  ]

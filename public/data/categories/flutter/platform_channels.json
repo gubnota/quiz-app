@@ -1,0 +1,212 @@
+[
+    {
+      "question": "Что такое Platform Channels в Flutter?",
+      "correct_answer": "Механизм для взаимодействия между Dart-кодом и нативным кодом (Java/Kotlin для Android, Swift/Objective-C для iOS).",
+      "incorrect_answers": [
+        "Инструмент для управления зависимостями в Flutter.",
+        "Способ создания анимаций в Flutter.",
+        "Метод для работы с базой данных в Flutter."
+      ],
+      "explanation": "Platform Channels позволяют Flutter-приложениям вызывать нативные функции и обмениваться данными с платформой (Android/iOS)."
+    },
+    {
+      "question": "Какой класс используется для вызова нативного кода из Dart?",
+      "correct_answer": "`MethodChannel`",
+      "incorrect_answers": [
+        "`EventChannel`",
+        "`BasicMessageChannel`",
+        "`NativeChannel`"
+      ],
+      "explanation": "`MethodChannel` используется для вызова нативных методов из Dart. Пример:\n\n```dart\nfinal platform = MethodChannel('samples.flutter.dev/battery');\nfinal int batteryLevel = await platform.invokeMethod('getBatteryLevel');\n```"
+    },
+    {
+      "question": "Какой класс используется для передачи потоковых данных из нативного кода в Dart?",
+      "correct_answer": "`EventChannel`",
+      "incorrect_answers": [
+        "`MethodChannel`",
+        "`BasicMessageChannel`",
+        "`StreamChannel`"
+      ],
+      "explanation": "`EventChannel` используется для передачи потоковых данных из нативного кода в Dart. Пример:\n\n```dart\nfinal eventChannel = EventChannel('samples.flutter.dev/events');\neventChannel.receiveBroadcastStream().listen((data) {\n  print('Received data: $data');\n});\n```"
+    },
+    {
+      "question": "Какой класс используется для передачи простых сообщений между Dart и нативным кодом?",
+      "correct_answer": "`BasicMessageChannel`",
+      "incorrect_answers": [
+        "`MethodChannel`",
+        "`EventChannel`",
+        "`MessageChannel`"
+      ],
+      "explanation": "`BasicMessageChannel` используется для передачи простых сообщений между Dart и нативным кодом. Пример:\n\n```dart\nfinal messageChannel = BasicMessageChannel<String>('samples.flutter.dev/messages', StringCodec());\nmessageChannel.send('Hello from Dart');\n```"
+    },
+    {
+      "question": "Какой тип данных поддерживается Platform Channels?",
+      "correct_answer": "Примитивные типы (int, double, String, bool) и коллекции (List, Map).",
+      "incorrect_answers": [
+        "Только примитивные типы.",
+        "Только коллекции.",
+        "Любые объекты Dart."
+      ],
+      "explanation": "Platform Channels поддерживает примитивные типы и коллекции, такие как List и Map."
+    },
+    {
+      "question": "Какой метод используется для обработки ошибок в Platform Channels?",
+      "correct_answer": "Использование `try-catch` блока.",
+      "incorrect_answers": [
+        "Использование `onError` callback.",
+        "Использование `ErrorChannel`.",
+        "Использование `PlatformException`."
+      ],
+      "explanation": "Ошибки в Platform Channels обрабатываются с помощью `try-catch` блока. Пример:\n\n```dart\ntry {\n  final result = await platform.invokeMethod('getBatteryLevel');\n} on PlatformException catch (e) {\n  print('Error: ${e.message}');\n}\n```"
+    },
+    {
+      "question": "Какой метод используется для регистрации обработчика MethodChannel на стороне Dart?",
+      "correct_answer": "`setMethodCallHandler`",
+      "incorrect_answers": [
+        "`setMessageHandler`",
+        "`setEventCallHandler`",
+        "`setNativeHandler`"
+      ],
+      "explanation": "`setMethodCallHandler` регистрирует обработчик для MethodChannel. Пример:\n\n```dart\nplatform.setMethodCallHandler((call) async {\n  if (call.method == 'getBatteryLevel') {\n    return 42;\n  }\n  return null;\n});\n```"
+    },
+    {
+      "question": "Какой метод используется для отправки сообщений через BasicMessageChannel?",
+      "correct_answer": "`send`",
+      "incorrect_answers": [
+        "`invokeMethod`",
+        "`sendEvent`",
+        "`postMessage`"
+      ],
+      "explanation": "`send` используется для отправки сообщений через BasicMessageChannel. Пример:\n\n```dart\nfinal messageChannel = BasicMessageChannel<String>('samples.flutter.dev/messages', StringCodec());\nmessageChannel.send('Hello from Dart');\n```"
+    },
+    {
+      "question": "Какой метод используется для регистрации обработчика EventChannel на стороне Dart?",
+      "correct_answer": "`receiveBroadcastStream`",
+      "incorrect_answers": [
+        "`setMethodCallHandler`",
+        "`setMessageHandler`",
+        "`setNativeHandler`"
+      ],
+      "explanation": "`receiveBroadcastStream` регистрирует обработчик для EventChannel. Пример:\n\n```dart\nfinal eventChannel = EventChannel('samples.flutter.dev/events');\neventChannel.receiveBroadcastStream().listen((data) {\n  print('Received data: $data');\n});\n```"
+    },
+    {
+      "question": "Какой метод используется для вызова нативного метода из Dart?",
+      "correct_answer": "`invokeMethod`",
+      "incorrect_answers": [
+        "`send`",
+        "`sendEvent`",
+        "`postMessage`"
+      ],
+      "explanation": "`invokeMethod` используется для вызова нативного метода из Dart. Пример:\n\n```dart\nfinal platform = MethodChannel('samples.flutter.dev/battery');\nfinal int batteryLevel = await platform.invokeMethod('getBatteryLevel');\n```"
+    },
+    {
+      "question": "Какой метод используется для обработки сообщений в BasicMessageChannel?",
+      "correct_answer": "`setMessageHandler`",
+      "incorrect_answers": [
+        "`setMethodCallHandler`",
+        "`setEventCallHandler`",
+        "`setNativeHandler`"
+      ],
+      "explanation": "`setMessageHandler` регистрирует обработчик для BasicMessageChannel. Пример:\n\n```dart\nfinal messageChannel = BasicMessageChannel<String>('samples.flutter.dev/messages', StringCodec());\nmessageChannel.setMessageHandler((message) async {\n  return 'Received: $message';\n});\n```"
+    },
+    {
+      "question": "Какой метод используется для отправки событий через EventChannel?",
+      "correct_answer": "`sendEvent`",
+      "incorrect_answers": [
+        "`invokeMethod`",
+        "`send`",
+        "`postMessage`"
+      ],
+      "explanation": "`sendEvent` используется для отправки событий через EventChannel. Пример на стороне нативного кода (Android):\n\n```java\nEventChannel.EventSink eventSink = ...;\neventSink.success(\"Event data\");\n```"
+    },
+    {
+      "question": "Какой метод используется для обработки ошибок в MethodChannel?",
+      "correct_answer": "`PlatformException`",
+      "incorrect_answers": [
+        "`ErrorChannel`",
+        "`onError` callback",
+        "`try-catch` блок"
+      ],
+      "explanation": "`PlatformException` используется для обработки ошибок в MethodChannel. Пример:\n\n```dart\ntry {\n  final result = await platform.invokeMethod('getBatteryLevel');\n} on PlatformException catch (e) {\n  print('Error: ${e.message}');\n}\n```"
+    },
+    {
+      "question": "Какой метод используется для регистрации MethodChannel на стороне нативного кода (Android)?",
+      "correct_answer": "`MethodChannel`",
+      "incorrect_answers": [
+        "`EventChannel`",
+        "`BasicMessageChannel`",
+        "`NativeChannel`"
+      ],
+      "explanation": "`MethodChannel` используется для регистрации на стороне нативного кода. Пример (Android):\n\n```java\nnew MethodChannel(getFlutterView(), \"samples.flutter.dev/battery\").setMethodCallHandler(\n  (call, result) -> {\n    if (call.method.equals(\"getBatteryLevel\")) {\n      result.success(42);\n    } else {\n      result.notImplemented();\n    }\n  }\n);\n```"
+    },
+    {
+      "question": "Какой метод используется для регистрации EventChannel на стороне нативного кода (iOS)?",
+      "correct_answer": "`FlutterEventChannel`",
+      "incorrect_answers": [
+        "`FlutterMethodChannel`",
+        "`FlutterBasicMessageChannel`",
+        "`FlutterNativeChannel`"
+      ],
+      "explanation": "`FlutterEventChannel` используется для регистрации на стороне нативного кода. Пример (iOS):\n\n```swift\nlet eventChannel = FlutterEventChannel(name: \"samples.flutter.dev/events\", binaryMessenger: controller.binaryMessenger)\neventChannel.setStreamHandler(self)\n```"
+    },
+    {
+      "question": "Какой метод используется для регистрации BasicMessageChannel на стороне нативного кода (Android)?",
+      "correct_answer": "`BasicMessageChannel`",
+      "incorrect_answers": [
+        "`MethodChannel`",
+        "`EventChannel`",
+        "`NativeChannel`"
+      ],
+      "explanation": "`BasicMessageChannel` используется для регистрации на стороне нативного кода. Пример (Android):\n\n```java\nnew BasicMessageChannel<>(getFlutterView(), \"samples.flutter.dev/messages\", StringCodec.INSTANCE).setMessageHandler(\n  (message, reply) -> {\n    reply.reply(\"Received: \" + message);\n  }\n);\n```"
+    },
+    {
+      "question": "Какой метод используется для отправки сообщений через MethodChannel?",
+      "correct_answer": "`invokeMethod`",
+      "incorrect_answers": [
+        "`send`",
+        "`sendEvent`",
+        "`postMessage`"
+      ],
+      "explanation": "`invokeMethod` используется для отправки сообщений через MethodChannel. Пример:\n\n```dart\nfinal platform = MethodChannel('samples.flutter.dev/battery');\nfinal int batteryLevel = await platform.invokeMethod('getBatteryLevel');\n```"
+    },
+    {
+      "question": "Какой метод используется для обработки событий в EventChannel?",
+      "correct_answer": "`onListen` и `onCancel`",
+      "incorrect_answers": [
+        "`setMethodCallHandler`",
+        "`setMessageHandler`",
+        "`setNativeHandler`"
+      ],
+      "explanation": "`onListen` и `onCancel` используются для обработки событий в EventChannel. Пример (Android):\n\n```java\n@Override\npublic void onListen(Object arguments, EventChannel.EventSink events) {\n  events.success(\"Event data\");\n}\n\n@Override\npublic void onCancel(Object arguments) {\n  // Cleanup\n}\n```"
+    },
+    {
+      "question": "Какой метод используется для обработки сообщений в BasicMessageChannel на стороне нативного кода?",
+      "correct_answer": "`setMessageHandler`",
+      "incorrect_answers": [
+        "`setMethodCallHandler`",
+        "`setEventCallHandler`",
+        "`setNativeHandler`"
+      ],
+      "explanation": "`setMessageHandler` используется для обработки сообщений в BasicMessageChannel. Пример (Android):\n\n```java\nnew BasicMessageChannel<>(getFlutterView(), \"samples.flutter.dev/messages\", StringCodec.INSTANCE).setMessageHandler(\n  (message, reply) -> {\n    reply.reply(\"Received: \" + message);\n  }\n);\n```"
+    },
+    {
+      "question": "Какой метод используется для отправки сообщений через EventChannel?",
+      "correct_answer": "`sendEvent`",
+      "incorrect_answers": [
+        "`invokeMethod`",
+        "`send`",
+        "`postMessage`"
+      ],
+      "explanation": "`sendEvent` используется для отправки сообщений через EventChannel. Пример на стороне нативного кода (Android):\n\n```java\nEventChannel.EventSink eventSink = ...;\neventSink.success(\"Event data\");\n```"
+    },
+    {
+      "question": "Какой метод используется для обработки ошибок в BasicMessageChannel?",
+      "correct_answer": "Использование `try-catch` блока.",
+      "incorrect_answers": [
+        "Использование `PlatformException`.",
+        "Использование `ErrorChannel`.",
+        "Использование `onError` callback."
+      ],
+      "explanation": "Ошибки в BasicMessageChannel обрабатываются с помощью `try-catch` блока. Пример:\n\n```dart\ntry {\n  final response = await messageChannel.send('Hello');\n} catch (e) {\n  print('Error: $e');\n}\n```"
+    }
+  ]
