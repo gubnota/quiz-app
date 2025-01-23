@@ -1,0 +1,112 @@
+[
+  {
+    "question": "What is the purpose of the `mixin` keyword in Dart?",
+    "correct_answer": "To add reusable functionality to classes without using inheritance.",
+    "incorrect_answers": [
+      "To define a constant value.",
+      "To declare an abstract class.",
+      "To handle exceptions in a try-catch block."
+    ],
+    "explanation": "The `mixin` keyword is used to define reusable pieces of code that can be added to multiple classes using the `with` keyword.",
+    "code_example": "mixin Logging {\n  void log(String message) {\n    print('Log: $message');\n  }\n}\n\nclass User with Logging {\n  void performAction() {\n    log('Action performed');\n  }\n}"
+  },
+  {
+    "question": "What does the `typedef` keyword do in Dart?",
+    "correct_answer": "Defines a type alias for complex types, making them easier to use.",
+    "incorrect_answers": [
+      "Declares an abstract class.",
+      "Marks a function as asynchronous.",
+      "Handles exceptions in a try-catch block."
+    ],
+    "explanation": "The `typedef` keyword is used to create a type alias for complex types, such as function signatures, making them easier to use and understand.",
+    "code_example": "typedef IntList = List<int>;\nIntList numbers = [1, 2, 3];"
+  },
+  {
+    "question": "What is the purpose of the `part of` keyword in Dart?",
+    "correct_answer": "To declare that a file is part of a larger library.",
+    "incorrect_answers": [
+      "To define a constant value.",
+      "To mark a function as asynchronous.",
+      "To handle exceptions in a try-catch block."
+    ],
+    "explanation": "The `part of` keyword is used to split a single library into multiple files, allowing code organization while maintaining access to private members.",
+    "code_example": "// main_library.dart\nlibrary my_library;\npart 'part1.dart';\n\n// part1.dart\npart of my_library;\n\nvoid function1() {\n  print('Hello from part1');\n}"
+  },
+  {
+    "question": "What does the `library` keyword do in Dart?",
+    "correct_answer": "Declares a library, which is a collection of related code.",
+    "incorrect_answers": [
+      "Defines a constant value.",
+      "Marks a function as asynchronous.",
+      "Handles exceptions in a try-catch block."
+    ],
+    "explanation": "The `library` keyword is used to declare a library, which is a collection of related code that can be imported into other files.",
+    "code_example": "library my_library;\n\nvoid main() {\n  print('Hello from my_library');\n}"
+  },
+  {
+    "question": "What is the purpose of the `on` keyword in Dart?",
+    "correct_answer": "To restrict a mixin to specific classes or interfaces.",
+    "incorrect_answers": [
+      "To define a constant value.",
+      "To declare an abstract class.",
+      "To handle exceptions in a try-catch block."
+    ],
+    "explanation": "The `on` keyword is used in mixins to restrict their usage to specific classes or interfaces.",
+    "code_example": "mixin Logging on User {\n  void log(String message) {\n    print('Log: $message');\n  }\n}\n\nclass User with Logging {\n  void performAction() {\n    log('Action performed');\n  }\n}"
+  },
+  {
+    "question": "What does the `covariant` keyword do in Dart?",
+    "correct_answer": "Allows overriding a parameter type with a subtype in a method.",
+    "incorrect_answers": [
+      "Defines a constant value.",
+      "Declares an abstract class.",
+      "Marks a function as asynchronous."
+    ],
+    "explanation": "The `covariant` keyword is used to allow a subclass to override a method parameter with a more specific type.",
+    "code_example": "class Animal {\n  void chase(covariant Animal animal) {\n    print('Chasing $animal');\n  }\n}\n\nclass Dog extends Animal {\n  @override\n  void chase(Dog dog) {\n    print('Dog chasing another dog');\n  }\n}"
+  },
+  {
+    "question": "What is the purpose of the `rethrow` keyword in Dart?",
+    "correct_answer": "To rethrow an exception after catching it.",
+    "incorrect_answers": [
+      "To define a constant value.",
+      "To declare an abstract class.",
+      "To mark a function as asynchronous."
+    ],
+    "explanation": "The `rethrow` keyword is used to rethrow an exception after catching it, preserving the original stack trace.",
+    "code_example": "try {\n  throw Exception('Error!');\n} catch (e) {\n  print('Caught: $e');\n  rethrow;\n}"
+  },
+  {
+    "question": "What does the `sync*` keyword do in Dart?",
+    "correct_answer": "Marks a function as a synchronous generator.",
+    "incorrect_answers": [
+      "Defines a constant value.",
+      "Declares an abstract class.",
+      "Handles exceptions in a try-catch block."
+    ],
+    "explanation": "The `sync*` keyword is used to mark a function as a synchronous generator, which yields values using the `yield` keyword.",
+    "code_example": "Iterable<int> generateNumbers() sync* {\n  for (int i = 0; i < 5; i++) {\n    yield i;\n  }\n}"
+  },
+  {
+    "question": "What is the purpose of the `async*` keyword in Dart?",
+    "correct_answer": "Marks a function as an asynchronous generator.",
+    "incorrect_answers": [
+      "Defines a constant value.",
+      "Declares an abstract class.",
+      "Handles exceptions in a try-catch block."
+    ],
+    "explanation": "The `async*` keyword is used to mark a function as an asynchronous generator, which yields values asynchronously using the `yield` keyword.",
+    "code_example": "Stream<int> generateNumbers() async* {\n  for (int i = 0; i < 5; i++) {\n    yield i;\n  }\n}"
+  },
+  {
+    "question": "What does the `yield` keyword do in Dart?",
+    "correct_answer": "Produces a value in a generator function.",
+    "incorrect_answers": [
+      "Defines a constant value.",
+      "Declares an abstract class.",
+      "Handles exceptions in a try-catch block."
+    ],
+    "explanation": "The `yield` keyword is used in generator functions (`sync*` or `async*`) to produce a value and pause execution until the next value is requested.",
+    "code_example": "Stream<int> generateNumbers() async* {\n  for (int i = 0; i < 5; i++) {\n    yield i;\n  }\n}"
+  }
+]

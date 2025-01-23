@@ -26,6 +26,11 @@
                   "value": "dart/types"
                 },
                 {
+                  "key": "keywords",
+                  "text": "keywords",
+                  "value": "dart/keywords"
+                },
+                {
                   "key": "error_handling",
                   "text": "Error Handling",
                   "value": "dart/error_handling"
