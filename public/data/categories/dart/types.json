@@ -1,0 +1,62 @@
+[
+    {
+      "question": "What is the difference between `final` and `const` in Dart?",
+      "correct_answer": "`final` is a runtime constant, while `const` is a compile-time constant.",
+      "incorrect_answers": [
+        "`final` can change; `const` cannot change.",
+        "Both are runtime constants.",
+        "`const` is a runtime constant; `final` is a compile-time constant."
+      ],
+      "explanation": "`final` variables are initialized at runtime and cannot be reassigned, while `const` variables are determined at compile time and are immutable."
+    },
+    {
+      "question": "Which type in Dart allows null values by default?",
+      "correct_answer": "Nullable types, such as `String?`.",
+      "incorrect_answers": [
+        "Non-nullable types, such as `String`.",
+        "All types in Dart allow null values by default.",
+        "Dart does not support nullable types."
+      ],
+      "explanation": "Dart distinguishes between nullable (`String?`) and non-nullable (`String`) types, with nullable types explicitly allowing null values."
+    },
+    {
+      "question": "What is the default value of an uninitialized variable in Dart?",
+      "correct_answer": "null",
+      "incorrect_answers": [
+        "0",
+        "An empty string",
+        "An error is thrown if the variable is uninitialized."
+      ],
+      "explanation": "All uninitialized variables in Dart have a default value of `null`, even for non-nullable types before sound null safety."
+    },
+    {
+      "question": "What is the purpose of using generics in Dart?",
+      "correct_answer": "To create reusable code that works with multiple types while maintaining type safety.",
+      "incorrect_answers": [
+        "To create classes that cannot be inherited.",
+        "To improve runtime performance.",
+        "To avoid writing constructors in classes."
+      ],
+      "explanation": "Generics allow developers to write code that can handle different data types while ensuring type safety at compile time."
+    },
+    {
+      "question": "What does the following Dart code output?\n```dart\nvoid main() {\n  var list = [1, 2, 3];\n  print(list is List<int>);\n}\n```",
+      "correct_answer": "true",
+      "incorrect_answers": [
+        "false",
+        "An error occurs because Dart does not support type checks.",
+        "An error occurs because `List<int>` is not valid syntax."
+      ],
+      "explanation": "Dart supports type checks using the `is` operator, and `list` is indeed a `List<int>`."
+    },
+    {
+      "question": "What is the difference between `dynamic`, `var`, and `Object?` in Dart?",
+      "correct_answer": "`dynamic` bypasses type checking, `var` infers the type, and `Object?` is the root of all types and nullable.",
+      "incorrect_answers": [
+        "`dynamic` is the same as `Object?`, and `var` is a shorthand for `dynamic`.",
+        "`var` and `Object?` are interchangeable, while `dynamic` is for null safety.",
+        "`Object?` and `dynamic` are type-safe, while `var` is not."
+      ],
+      "explanation": "`dynamic` disables type checking, `var` infers the type at initialization, and `Object?` is the nullable root type."
+    }
+  ]

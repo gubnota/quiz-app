@@ -1,0 +1,192 @@
+[
+    {
+      "question": "Какой виджет используется для создания кастомного макета?",
+      "correct_answer": "CustomMultiChildLayout",
+      "incorrect_answers": [
+        "Column",
+        "Row",
+        "Stack"
+      ],
+      "explanation": "CustomMultiChildLayout позволяет создавать кастомные макеты с несколькими дочерними элементами."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с ограничениями?",
+      "correct_answer": "ConstrainedBox",
+      "incorrect_answers": [
+        "Container",
+        "SizedBox",
+        "Flexible"
+      ],
+      "explanation": "ConstrainedBox применяет ограничения к своему дочернему элементу."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с фиксированным размером?",
+      "correct_answer": "SizedBox",
+      "incorrect_answers": [
+        "Container",
+        "ConstrainedBox",
+        "Flexible"
+      ],
+      "explanation": "SizedBox создает макет с фиксированным размером."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с гибким размером?",
+      "correct_answer": "Flexible",
+      "incorrect_answers": [
+        "Container",
+        "ConstrainedBox",
+        "SizedBox"
+      ],
+      "explanation": "Flexible создает макет с гибким размером."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с прокруткой?",
+      "correct_answer": "SingleChildScrollView",
+      "incorrect_answers": [
+        "Column",
+        "Row",
+        "Stack"
+      ],
+      "explanation": "SingleChildScrollView создает макет с прокруткой."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с несколькими дочерними элементами?",
+      "correct_answer": "Column",
+      "incorrect_answers": [
+        "Container",
+        "ConstrainedBox",
+        "SizedBox"
+      ],
+      "explanation": "Column создает макет с несколькими дочерними элементами."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с несколькими дочерними элементами в строке?",
+      "correct_answer": "Row",
+      "incorrect_answers": [
+        "Container",
+        "ConstrainedBox",
+        "SizedBox"
+      ],
+      "explanation": "Row создает макет с несколькими дочерними элементами в строке."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с наложением дочерних элементов?",
+      "correct_answer": "Stack",
+      "incorrect_answers": [
+        "Column",
+        "Row",
+        "Container"
+      ],
+      "explanation": "Stack создает макет с наложением дочерних элементов."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с прокруткой и несколькими дочерними элементами?",
+      "correct_answer": "ListView",
+      "incorrect_answers": [
+        "Column",
+        "Row",
+        "Stack"
+      ],
+      "explanation": "ListView создает макет с прокруткой и несколькими дочерними элементами."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с прокруткой и несколькими дочерними элементами в строке?",
+      "correct_answer": "ListView.builder",
+      "incorrect_answers": [
+        "Column",
+        "Row",
+        "Stack"
+      ],
+      "explanation": "ListView.builder создает макет с прокруткой и несколькими дочерними элементами в строке."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с прокруткой и несколькими дочерними элементами в столбце?",
+      "correct_answer": "ListView.builder",
+      "incorrect_answers": [
+        "Column",
+        "Row",
+        "Stack"
+      ],
+      "explanation": "ListView.builder создает макет с прокруткой и несколькими дочерними элементами в столбце."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с прокруткой и несколькими дочерними элементами в сетке?",
+      "correct_answer": "GridView",
+      "incorrect_answers": [
+        "Column",
+        "Row",
+        "Stack"
+      ],
+      "explanation": "GridView создает макет с прокруткой и несколькими дочерними элементами в сетке."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с прокруткой и несколькими дочерними элементами в сетке с фиксированным количеством столбцов?",
+      "correct_answer": "GridView.count",
+      "incorrect_answers": [
+        "Column",
+        "Row",
+        "Stack"
+      ],
+      "explanation": "GridView.count создает макет с прокруткой и несколькими дочерними элементами в сетке с фиксированным количеством столбцов."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с прокруткой и несколькими дочерними элементами в сетке с фиксированной шириной столбцов?",
+      "correct_answer": "GridView.extent",
+      "incorrect_answers": [
+        "Column",
+        "Row",
+        "Stack"
+      ],
+      "explanation": "GridView.extent создает макет с прокруткой и несколькими дочерними элементами в сетке с фиксированной шириной столбцов."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с прокруткой и несколькими дочерними элементами в сетке с фиксированной высотой строк?",
+      "correct_answer": "GridView.builder",
+      "incorrect_answers": [
+        "Column",
+        "Row",
+        "Stack"
+      ],
+      "explanation": "GridView.builder создает макет с прокруткой и несколькими дочерними элементами в сетке с фиксированной высотой строк."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с прокруткой и несколькими дочерними элементами в сетке с фиксированной шириной столбцов и высотой строк?",
+      "correct_answer": "GridView.custom",
+      "incorrect_answers": [
+        "Column",
+        "Row",
+        "Stack"
+      ],
+      "explanation": "GridView.custom создает макет с прокруткой и несколькими дочерними элементами в сетке с фиксированной шириной столбцов и высотой строк."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с прокруткой и несколькими дочерними элементами в сетке с фиксированной шириной столбцов и высотой строк?",
+      "correct_answer": "GridView.custom",
+      "incorrect_answers": [
+        "Column",
+        "Row",
+        "Stack"
+      ],
+      "explanation": "GridView.custom создает макет с прокруткой и несколькими дочерними элементами в сетке с фиксированной шириной столбцов и высотой строк."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с прокруткой и несколькими дочерними элементами в сетке с фиксированной шириной столбцов и высотой строк?",
+      "correct_answer": "GridView.custom",
+      "incorrect_answers": [
+        "Column",
+        "Row",
+        "Stack"
+      ],
+      "explanation": "GridView.custom создает макет с прокруткой и несколькими дочерними элементами в сетке с фиксированной шириной столбцов и высотой строк."
+    },
+    {
+      "question": "Какой виджет используется для создания макета с прокруткой и несколькими дочерними элементами в сетке с фиксированной шириной столбцов и высотой строк?",
+      "correct_answer": "GridView.custom",
+      "incorrect_answers": [
+        "Column",
+        "Row",
+        "Stack"
+      ],
+      "explanation": "GridView.custom создает макет с прокруткой и несколькими дочерними элементами в сетке с фиксированной шириной столбцов и высотой строк."
+    }
+  ]

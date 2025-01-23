@@ -1,0 +1,202 @@
+[
+  {
+    "question": "What is the primary difference between a `StatelessWidget` and a `StatefulWidget` in Flutter?",
+    "correct_answer": "A `StatelessWidget` does not have a mutable state, while a `StatefulWidget` can maintain and update state.",
+    "incorrect_answers": [
+      "A `StatelessWidget` can contain child widgets, while a `StatefulWidget` cannot.",
+      "A `StatelessWidget` is faster to render than a `StatefulWidget`.",
+      "A `StatelessWidget` is used for animations, while a `StatefulWidget` is not."
+    ],
+    "explanation": "A `StatelessWidget` is immutable and does not maintain state changes, while a `StatefulWidget` has a mutable state object that can be updated dynamically."
+  },
+  {
+    "question": "What is the purpose of the widget tree in Flutter?",
+    "correct_answer": "To describe the structure and layout of the UI.",
+    "incorrect_answers": [
+      "To store runtime data for the application.",
+      "To handle API calls in the backend.",
+      "To define global settings for the app."
+    ],
+    "explanation": "The widget tree in Flutter is a hierarchical structure that defines the UI components and their relationships, forming the visual interface of the app."
+  },
+  {
+    "question": "What is the role of a render object in Flutter?",
+    "correct_answer": "To handle layout, painting, and rendering of widgets.",
+    "incorrect_answers": [
+      "To store the state of a widget.",
+      "To define the data model for the app.",
+      "To provide navigation between screens."
+    ],
+    "explanation": "Render objects in Flutter are responsible for calculating layout, painting visuals, and handling hit testing for the widgets in the UI."
+  },
+  {
+    "question": "How does a `StatefulWidget` manage its state in Flutter?",
+    "correct_answer": "By using a `State` object that can be updated with `setState`.",
+    "incorrect_answers": [
+      "By storing state in the widget tree.",
+      "By creating a new widget instance each time the state changes.",
+      "By using global variables for state management."
+    ],
+    "explanation": "A `StatefulWidget` delegates its mutable state to a separate `State` object, which can be updated using the `setState` method."
+  },
+  {
+    "question": "What does the `build()` method in a widget do?",
+    "correct_answer": "It describes the widget's part of the UI by returning a widget tree.",
+    "incorrect_answers": [
+      "It initializes the widget's state.",
+      "It attaches event listeners to the widget.",
+      "It renders the widget directly onto the screen."
+    ],
+    "explanation": "The `build()` method is called to construct the widget's UI and returns a tree of widgets that represent the interface."
+  },
+  {
+    "question": "Which widget lifecycle method is called only once when a `StatefulWidget` is inserted into the widget tree?",
+    "correct_answer": "`initState`",
+    "incorrect_answers": [
+      "`didChangeDependencies`",
+      "`build`",
+      "`dispose`"
+    ],
+    "explanation": "`initState` is called once when the `StatefulWidget` is added to the widget tree, allowing initial setup for the widget's state."
+  },
+  {
+    "question": "What happens when `setState` is called in a `StatefulWidget`?",
+    "correct_answer": "The `build()` method is triggered to rebuild the widget tree.",
+    "incorrect_answers": [
+      "The entire widget tree is destroyed and recreated.",
+      "The widget's state is reset to its initial value.",
+      "The app restarts from the `main()` function."
+    ],
+    "explanation": "Calling `setState` notifies the framework to rebuild the widget tree starting from the widget where the state changed."
+  },
+  {
+    "question": "Which of the following is NOT part of the widget tree hierarchy in Flutter?",
+    "correct_answer": "`ServiceWidget`",
+    "incorrect_answers": [
+      "`StatelessWidget`",
+      "`StatefulWidget`",
+      "`InheritedWidget`"
+    ],
+    "explanation": "`ServiceWidget` is not a valid widget type in Flutter. The widget tree typically consists of classes like `StatelessWidget`, `StatefulWidget`, and `InheritedWidget`."
+  },
+  {
+    "question": "What will happen if you create a widget with an expensive layout computation in the `build()` method without optimization?",
+    "correct_answer": "The app's performance may degrade due to frequent recomputations during widget rebuilds.",
+    "incorrect_answers": [
+      "The app will crash.",
+      "The widget will render faster than normal.",
+      "The widget tree will remain unchanged."
+    ],
+    "explanation": "Placing expensive computations in the `build()` method can slow down the app, as this method is called frequently during widget rebuilds."
+  },
+  {
+    "question": "What is the difference between a `StatelessWidget` and a `RenderObjectWidget`?",
+    "correct_answer": "`StatelessWidget` describes the UI, while `RenderObjectWidget` handles layout and rendering.",
+    "incorrect_answers": [
+      "`StatelessWidget` is for animations, while `RenderObjectWidget` is for static layouts.",
+      "`RenderObjectWidget` is only used in web applications.",
+      "`StatelessWidget` is faster than `RenderObjectWidget`."
+    ],
+    "explanation": "`StatelessWidget` is part of the UI layer and describes how the UI should look, while `RenderObjectWidget` interacts with the rendering layer to handle layout and painting."
+  },
+  {
+    "question": "What is the purpose of `InheritedWidget` in Flutter?",
+    "correct_answer": "To efficiently propagate data down the widget tree.",
+    "incorrect_answers": [
+      "To manage animations in the app.",
+      "To handle navigation between screens.",
+      "To define the layout of the UI."
+    ],
+    "explanation": "`InheritedWidget` is used to propagate data down the widget tree efficiently, allowing widgets to access shared data without passing it explicitly."
+  },
+  {
+    "question": "What is the purpose of `Key` in Flutter widgets?",
+    "correct_answer": "To uniquely identify widgets in the widget tree.",
+    "incorrect_answers": [
+      "To define the layout of the UI.",
+      "To handle navigation between screens.",
+      "To manage animations in the app."
+    ],
+    "explanation": "`Key` is used to uniquely identify widgets in the widget tree, which is useful for state preservation and widget updates."
+  },
+  {
+    "question": "What is the purpose of `GlobalKey` in Flutter?",
+    "correct_answer": "To uniquely identify widgets across the entire app.",
+    "incorrect_answers": [
+      "To define the layout of the UI.",
+      "To handle navigation between screens.",
+      "To manage animations in the app."
+    ],
+    "explanation": "`GlobalKey` is used to uniquely identify widgets across the entire app, allowing access to their state or properties from anywhere."
+  },
+  {
+    "question": "What is the purpose of `MediaQuery` in Flutter?",
+    "correct_answer": "To access information about the device's screen size and orientation.",
+    "incorrect_answers": [
+      "To define the layout of the UI.",
+      "To handle navigation between screens.",
+      "To manage animations in the app."
+    ],
+    "explanation": "`MediaQuery` provides information about the device's screen size, orientation, and other display-related properties, which is useful for responsive design."
+  },
+  {
+    "question": "What is the purpose of `LayoutBuilder` in Flutter?",
+    "correct_answer": "To build a widget tree based on the parent widget's constraints.",
+    "incorrect_answers": [
+      "To define the layout of the UI.",
+      "To handle navigation between screens.",
+      "To manage animations in the app."
+    ],
+    "explanation": "`LayoutBuilder` is used to build a widget tree based on the constraints provided by the parent widget, making it useful for responsive layouts."
+  },
+  {
+    "question": "What is the purpose of `Flexible` and `Expanded` widgets in Flutter?",
+    "correct_answer": "To control how child widgets fill available space in a `Flex` container.",
+    "incorrect_answers": [
+      "To define the layout of the UI.",
+      "To handle navigation between screens.",
+      "To manage animations in the app."
+    ],
+    "explanation": "`Flexible` and `Expanded` widgets are used to control how child widgets fill available space within a `Flex` container, such as `Row` or `Column`."
+  },
+  {
+    "question": "What is the purpose of `Spacer` in Flutter?",
+    "correct_answer": "To create empty space between widgets in a `Flex` container.",
+    "incorrect_answers": [
+      "To define the layout of the UI.",
+      "To handle navigation between screens.",
+      "To manage animations in the app."
+    ],
+    "explanation": "`Spacer` is used to create empty space between widgets in a `Flex` container, such as `Row` or `Column`."
+  },
+  {
+    "question": "What is the purpose of `AspectRatio` in Flutter?",
+    "correct_answer": "To enforce a specific aspect ratio for a widget.",
+    "incorrect_answers": [
+      "To define the layout of the UI.",
+      "To handle navigation between screens.",
+      "To manage animations in the app."
+    ],
+    "explanation": "`AspectRatio` is used to enforce a specific aspect ratio for a widget, ensuring it maintains a consistent width-to-height ratio."
+  },
+  {
+    "question": "What is the purpose of `ConstrainedBox` in Flutter?",
+    "correct_answer": "To apply additional constraints to a child widget.",
+    "incorrect_answers": [
+      "To define the layout of the UI.",
+      "To handle navigation between screens.",
+      "To manage animations in the app."
+    ],
+    "explanation": "`ConstrainedBox` is used to apply additional constraints to a child widget, such as minimum or maximum width and height."
+  },
+  {
+    "question": "What is the purpose of `SizedBox` in Flutter?",
+    "correct_answer": "To create a box with a fixed size.",
+    "incorrect_answers": [
+      "To define the layout of the UI.",
+      "To handle navigation between screens.",
+      "To manage animations in the app."
+    ],
+    "explanation": "`SizedBox` is used to create a box with a fixed size, which can be useful for spacing or sizing widgets."
+  }
+]

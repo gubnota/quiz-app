@@ -1,0 +1,102 @@
+[
+    {
+      "question": "What is the main purpose of Dart's null safety feature?",
+      "correct_answer": "To distinguish between nullable and non-nullable types at compile time.",
+      "incorrect_answers": [
+        "To improve runtime performance.",
+        "To allow all variables to hold null values.",
+        "To prevent runtime exceptions entirely."
+      ],
+      "explanation": "Dart's null safety ensures that nullable and non-nullable types are explicitly declared, helping to catch potential null errors at compile time."
+    },
+    {
+      "question": "Which type in Dart allows null values?",
+      "correct_answer": "`int?`",
+      "incorrect_answers": [
+        "`int`",
+        "`Object`",
+        "`List<int>`"
+      ],
+      "explanation": "In Dart, types with a `?` (e.g., `int?`) are nullable, meaning they can hold null values. Non-nullable types like `int` cannot."
+    },
+    {
+      "question": "What is the new root of the class hierarchy introduced with null safety in Dart?",
+      "correct_answer": "`Object?`",
+      "incorrect_answers": [
+        "`Object`",
+        "`Null`",
+        "`dynamic`"
+      ],
+      "explanation": "With null safety, `Object?` is the new root of the class hierarchy, allowing null values. The older root, `Object`, does not allow null."
+    },
+    {
+      "question": "What happens if you try to throw a null value in Dart with null safety?",
+      "correct_answer": "A `NullThrownError` is thrown.",
+      "incorrect_answers": [
+        "A `TypeError` is thrown.",
+        "The program crashes without an error.",
+        "It silently ignores the null value."
+      ],
+      "explanation": "In Dart, attempting to throw a null value results in a `NullThrownError`, introduced with null safety."
+    },
+    {
+      "question": "What is the purpose of the `late` keyword in Dart?",
+      "correct_answer": "To declare a non-nullable variable that will be initialized later.",
+      "incorrect_answers": [
+        "To mark a nullable variable as optional.",
+        "To enforce null checks on variables.",
+        "To create a variable that cannot be reassigned."
+      ],
+      "explanation": "The `late` keyword allows a non-nullable variable to be initialized at a later point, ensuring it is not accessed before being initialized."
+    },
+    {
+      "question": "What does the `required` keyword indicate in Dart?",
+      "correct_answer": "A named parameter must be provided when calling a function or constructor.",
+      "incorrect_answers": [
+        "A parameter is optional.",
+        "A variable is initialized at runtime.",
+        "A variable can be null."
+      ],
+      "explanation": "The `required` keyword ensures that a named parameter is mandatory and must be passed explicitly when calling a function or constructor."
+    },
+    {
+      "question": "What is the difference between `late` and `required` in Dart?",
+      "correct_answer": "`late` is for deferred initialization of variables; `required` enforces mandatory named parameters.",
+      "incorrect_answers": [
+        "`late` is for nullable variables; `required` is for non-nullable variables.",
+        "`late` and `required` can be used interchangeably.",
+        "`late` is for compile-time constants; `required` is for runtime variables."
+      ],
+      "explanation": "`late` is used to defer initialization of non-nullable variables, while `required` ensures that named parameters are mandatory in functions or constructors."
+    },
+    {
+      "question": "Which of the following is an example of a nullable type in Dart?",
+      "correct_answer": "`String?`",
+      "incorrect_answers": [
+        "`String`",
+        "`dynamic`",
+        "`Object`"
+      ],
+      "explanation": "A nullable type in Dart is indicated by a `?`, such as `String?`. This allows the variable to hold null values."
+    },
+    {
+      "question": "How can you handle nullable types in Dart to avoid runtime errors?",
+      "correct_answer": "Use null-aware operators such as `??` and `?.`.",
+      "incorrect_answers": [
+        "Cast the value to a non-nullable type.",
+        "Use `late` for all nullable variables.",
+        "Dart does not allow handling nullable types explicitly."
+      ],
+      "explanation": "Null-aware operators (`??`, `?.`, etc.) help safely handle nullable types in Dart, avoiding runtime errors due to null values."
+    },
+    {
+      "question": "What will the following code output?\n```dart\nvoid main() {\n  String? name;\n  print(name?.toUpperCase() ?? 'No name provided');\n}\n```",
+      "correct_answer": "No name provided",
+      "incorrect_answers": [
+        "null",
+        "NAME",
+        "An error is thrown because `name` is null."
+      ],
+      "explanation": "The null-aware operator `?.` ensures that the method `toUpperCase()` is not called if `name` is null. The `??` operator provides a default value."
+    }
+  ]
